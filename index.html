@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE Spotter App - Startseite</title>
+    <style>
+        :root {
+            --db-red: #ea1c24;
+            --bg-dark: #121212;
+            /* Leicht transparent, damit das Hintergrundbild durchschimmert */
+            --card-bg: rgba(30, 30, 30, 0.85); 
+            --text-main: #e0e0e0;
+            --text-muted: #aaa;
+            --border-color: #444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            /* HIER DEIN HINTERGRUNDBILD */
+            background-image: url(background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(5px); /* Macht den Hintergrund hinter der Box weich */
+            padding: 20px;
+            border-bottom: 3px solid var(--db-red);
+            text-align: center;
+        }
+
+        h1 { margin: 0; font-size: 1.6rem; }
+        p { color: var(--text-muted); }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-box {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.2s, opacity 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--db-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #c9181e;
+        }
+
+        .btn-web {
+            background-color: #222d5a;
+        }
+
+        .btn-web:hover {
+            opacity: 0.9;
+        }
+
+        .btn-pastebin {
+            background-color: #00a651;
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+
+        .btn-pastebin:hover {
+            background-color: #008f45;
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .credits {
+            margin-top: 5px;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .credits a {
+            color: var(--text-muted);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ICE-Taufnamen Sammler</h1>
+        <p>Verpasse keinen getauften ICE mehr</p>
+    </header>
+
+    <main>
+        <div class="hero-box">
+            <h2>Deine Triebzüge im Blick</h2>
+            <p>Verwalte deine Sichtungen direkt auf dem Smartphone, filtere nach Baureihen und behalte den Überblick über noch offene Taufnamen.</p>
+            
+            <ul class="features">
+                <li>Offline-Datenbank über externe Textdatei</li>
+                <li>Sichtungsverlauf mit Zeitstempel</li>
+                <li>Automatische Filterung bei doppelten Namen</li>
+                <li>Anpassbare Akzentfarben & Dark Mode</li>
+            </ul>
+
+            <div class="btn-container">
+                <a href="app.html" class="btn btn-web">Web-App im Browser öffnen</a>
+                <a href="install.html" class="btn btn-primary">Als Android-App installieren</a>
+                <a href="https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/92f57a9445b118362fcdd9f50d443cd371d5347c/gistfile1.txt" target="_blank" class="btn btn-pastebin">📋 Züge-Datenbank aufrufen</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>&copy; 2026 ICE Spotter App</div>
+        <div class="credits">
+            Hintergrund: <a href="https://commons.wikimedia.org/wiki/File:ICE_3_Oberhaider-Wald-Tunnel.jpg">Sebastian Terfloth User:Sese_Ingolstadt</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
+        </div>
+    </footer>
+
+</body>
+<script src="https://keepandroidopen.org/banner.js"></script>
+</html>
