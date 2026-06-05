@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICE Spotter App</title>
+    <title>ICE &amp; ÖPNV Spotter App</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="icon.png">
     <style>
         @font-face {
             font-family: 'DB Sans';
-            src: url('DB_Sans_Regular.otf') format('opentype');
+            src: url('fonts/DB_Sans_Regular.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
         @font-face {
             font-family: 'Oswald';
-            src: url('Oswald-VariableFont_wght.ttf') format('truetype');
+            src: url('fonts/Oswald-VariableFont_wght.ttf') format('truetype');
             font-weight: 100 900;
             font-style: normal;
         }
  
-        /* Bahnhofsblau → Oswald auf allen relevanten Elementen */
         body.font-bahnhofsblau,
         body.font-bahnhofsblau h1,
         body.font-bahnhofsblau h2,
@@ -68,7 +67,6 @@
             transition: background-color 0.3s, color 0.3s;
         }
  
-        /* ── HEADER ── */
         header {
             background-color: var(--accent-color);
             padding: 20px 20px 18px 20px;
@@ -160,7 +158,6 @@
             margin-top: 3px;
         }
  
-        /* ── MAIN ── */
         .main-content { padding: 0 15px; }
  
         .section-box {
@@ -188,7 +185,6 @@
             color: var(--text-muted);
         }
  
-        /* ── SETTINGS ── */
         .settings-box { display: none; }
         .setting-row-inline {
             display: flex;
@@ -198,7 +194,6 @@
             font-size: 0.95rem;
         }
  
-        /* ── INPUTS & BUTTONS ── */
         .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
         .input-group { display: flex; gap: 10px; }
  
@@ -238,7 +233,6 @@
         .btn-danger { background: #b71c1c; }
         .btn-small { padding: 7px 13px; font-size: 0.8rem; margin-right: 5px; margin-bottom: 5px; }
  
-        /* ── AUTOCOMPLETE ── */
         .suggestions {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -257,7 +251,6 @@
         .suggestion-item:last-child { border-bottom: none; }
         .suggestion-item:hover { background: var(--input-bg); }
  
-        /* ── AKKORDEON ── */
         details {
             background: var(--card-bg);
             margin-bottom: 15px;
@@ -294,7 +287,6 @@
             gap: 8px;
         }
  
-        /* ── ZUGKARTEN ── */
         .train-card {
             background: var(--input-bg);
             padding: 12px 14px;
@@ -321,7 +313,6 @@
         }
         .delete-btn:hover { background: #b71c1c; color: white; border-color: #b71c1c; }
  
-        /* ── VERLAUF ── */
         .history-list { list-style: none; padding: 0; margin: 0; }
         .history-item {
             padding: 9px 0;
@@ -333,7 +324,6 @@
         }
         .history-item:last-child { border-bottom: none; }
  
-        /* ── STATUS ── */
         .msg-box {
             padding: 10px 14px;
             border-radius: 6px;
@@ -354,8 +344,8 @@
 <body>
  
 <header>
-    <h1>ICE Spotter</h1>
-    <div class="header-subtitle">Taufnamen-Sammler · Deutsche Bahn</div>
+    <h1>ÖPNV &amp; ICE Spotter</h1>
+    <div class="header-subtitle">Taufnamen-Sammler · Deutsche Bahn &amp; HAVAG</div>
     <button class="settings-btn" id="settings-toggle-btn">⚙️</button>
     <div class="stats" id="stats-counter">Bereit</div>
     <div class="header-progress-bar">
@@ -398,20 +388,42 @@
         </div>
  
         <div class="setting-row-inline">
-            <label for="toggle-tz">Tz-Nummer anzeigen:</label>
+            <label for="toggle-tz">Nummer anzeigen:</label>
             <input type="checkbox" id="toggle-tz" checked onchange="toggleTzDisplay(this.checked)" style="flex-grow:0; width:auto;">
+        </div>
+
+        <div class="setting-row-inline">
+            <label for="toggle-ous">Ausgemusterte Fahrzeuge anzeigen (;OUS):</label>
+            <input type="checkbox" id="toggle-ous" onchange="toggleOusDisplay(this.checked)" style="flex-grow:0; width:auto;">
         </div>
  
         <div class="setting-row-inline">
             <label for="toggle-history">Sichtungsverlauf anzeigen:</label>
             <input type="checkbox" id="toggle-history" checked onchange="toggleHistoryDisplay(this.checked)" style="flex-grow:0; width:auto;">
         </div>
- 
-        <h3>Züge-Datenbank verwalten</h3>
-        <div style="margin-bottom:15px; display:flex; flex-direction:column; gap:8px;">
-            <button class="btn btn-secondary" onclick="downloadDatabaseFromServer()">Datenbank online aktualisieren</button>
+
+        <h3>Transportunternehmen &amp; Ansicht</h3>
+        
+        <div class="setting-row-inline">
+            <label style="font-weight:bold;">Aktive Unternehmen:</label>
+            <div style="display:flex; flex-direction:column; gap:6px; text-align:right;">
+                <label><input type="checkbox" id="company-db_ice" checked onchange="toggleCompany('db_ice')" style="margin-right:5px;"> DB (ICE)</label>
+                <label><input type="checkbox" id="company-havag" checked onchange="toggleCompany('havag')" style="margin-right:5px;"> HAVAG (Tram)</label>
+            </div>
         </div>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Manuelle Textdatei importieren (Fallback):</p>
+
+        <div class="setting-row-inline" style="margin-top:10px;">
+            <label for="view-mode-select">Listen-Ansicht:</label>
+            <select id="view-mode-select" onchange="changeViewMode(this.value)">
+                <option value="combined">Zusammengefasste Liste</option>
+                <option value="separate">Getrennte Listen nach Firma</option>
+            </select>
+        </div>
+ 
+        <div style="margin-bottom:15px; display:flex; flex-direction:column; gap:8px; margin-top:15px;">
+            <button class="btn btn-secondary" onclick="downloadAllActiveDatabases()">Datenbanken online aktualisieren</button>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Manuelle Textdatei importieren (Fallback für DB ICE):</p>
         <input type="file" id="tx-file-input" accept=".txt" onchange="loadTxtFile(this)" style="width:100%; margin-bottom:15px;">
  
         <h3>Sichtungsdaten verwalten</h3>
@@ -425,51 +437,85 @@
     <div class="controls">
         <div id="message" class="msg-box"></div>
         <div class="input-group">
-            <input type="text" id="spot-input" placeholder="Zugname oder Tz-Nummer..." oninput="showSuggestions(this.value)">
+            <input type="text" id="spot-input" placeholder="Name oder Fahrzeugnummer..." oninput="showSuggestions(this.value)">
             <button class="btn" onclick="submitSighting()">Sichten!</button>
         </div>
         <div id="suggestions-box" class="suggestions"></div>
     </div>
  
-    <details id="details-missing" open>
-        <summary>Noch offen (<span id="title-count-missing">0</span>)</summary>
-        <div class="accordion-content" id="missing-container"></div>
-    </details>
- 
-    <details id="details-spotted">
-        <summary>Gesehen &amp; Gesammelt (<span id="title-count-spotted">0</span>)</summary>
-        <div class="accordion-content" id="spotted-container"></div>
-    </details>
+    <div id="dynamic-lists-container"></div>
  
     <div class="section-box" id="history-section">
         <h2>Verlauf der Sichtungen</h2>
         <ul class="history-list" id="history-container">
-            <li style="color:#888; font-style:italic;">Noch keine Züge gesichtet.</li>
+            <li style="color:#888; font-style:italic;">Noch keine Fahrzeuge gesichtet.</li>
         </ul>
     </div>
  
 </div>
  
 <script>
-    let trains = [];
-    let spottedTrains = {};
+    let trains = []; 
+    let companyData = { db_ice: [], havag: [] }; 
+    let spottedTrains = {}; 
     let doppelteNamen = new Set();
     let settingsOpen = false;
-    let appConfig = { theme: "dark", accent: "#ea1c24", showTz: true, showHistory: true };
- 
+    
+    let appConfig = { 
+        theme: "dark", 
+        accent: "#ea1c24", 
+        showTz: true, 
+        showHistory: true,
+        showOus: false, 
+        activeCompanies: ["db_ice"], 
+        viewMode: "combined" 
+    };
+
     const accentKeyMap = {
         "#ea1c24": "dbrot",
         "#222d5a": "bahnhofsblau",
         "#587f40": "sbahn",
         "#903373": "ersatz"
     };
+
+    const databaseUrls = {
+        db_ice: "https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/3e2918e99f053b487adb25253897260390e15c9a/gistfile1.txt",
+        havag: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/havag.txt"
+    };
+
+    const companyNames = {
+        db_ice: "Deutsche Bahn",
+        havag: "HAVAG"
+    };
  
-    // ── Daten laden ──
-    try { const s = localStorage.getItem('spottedICE_v5'); if (s) spottedTrains = JSON.parse(s); } catch(e) {}
-    try { const s = localStorage.getItem('trainsCache_v5'); if (s) trains = JSON.parse(s); } catch(e) {}
     try { const s = localStorage.getItem('iceAppConfig_v5'); if (s) appConfig = { ...appConfig, ...JSON.parse(s) }; } catch(e) {}
  
-    // ── Settings-Button (Event statt inline onclick) ──
+    function loadAllData() {
+        trains = [];
+        spottedTrains = {};
+        
+        ["db_ice", "havag"].forEach(comp => {
+            try { 
+                const s = localStorage.getItem(`spotted_${comp}_v5`); 
+                if (s) {
+                    const parsed = JSON.parse(s);
+                    Object.assign(spottedTrains, parsed);
+                }
+            } catch(e) {}
+
+            try { 
+                const s = localStorage.getItem(`trainsCache_${comp}_v5`); 
+                if (s) {
+                    companyData[comp] = JSON.parse(s);
+                    if (appConfig.activeCompanies.includes(comp)) {
+                        const filteredTrains = companyData[comp].filter(t => appConfig.showOus || !t.ous);
+                        trains = trains.concat(filteredTrains);
+                    }
+                }
+            } catch(e) {}
+        });
+    }
+ 
     document.getElementById('settings-toggle-btn').addEventListener('click', function() {
         settingsOpen ? closeSettings() : openSettings();
     });
@@ -483,46 +529,49 @@
         document.getElementById('settings-area').style.display = 'none';
     }
  
-    // ── Datenbank ──
-    function parseAndSaveText(text) {
+    function parseTextForCompany(text, comp) {
         const parsed = [];
         text.split('\n').forEach(line => {
             const parts = line.split(';');
             if (parts.length >= 4) {
+                const isOus = line.includes(';OUS');
                 parsed.push({
                     id: parts[0].trim(),
                     number: parts[1].trim(),
                     name: parts[2].trim(),
-                    type: parts[3].trim()
+                    type: parts[3].trim(),
+                    company: comp,
+                    ous: isOus
                 });
             }
         });
         if (parsed.length > 0) {
-            trains = parsed;
-            try { localStorage.setItem('trainsCache_v5', JSON.stringify(trains)); } catch(e) {}
+            companyData[comp] = parsed;
+            try { localStorage.setItem(`trainsCache_${comp}_v5`, JSON.stringify(parsed)); } catch(e) {}
             return true;
         }
         return false;
     }
  
-    function downloadDatabaseFromServer() {
-        // Immer-aktuell URL (ohne festen Commit-Hash)
-        const url = "https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/3e2918e99f053b487adb25253897260390e15c9a/gistfile1.txt";
-        showStatusMessage("Lade Datenbank...", "#ff9800");
-        fetch(url)
-            .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-            .then(text => {
-                if (parseAndSaveText(text)) {
-                    showStatusMessage("Datenbank geladen!", "#4caf50");
-                    initApp();
-                } else {
-                    showStatusMessage("Falsches Format!", "#db4437");
-                }
-            })
-            .catch(err => {
-                console.error("DB-Download Fehler:", err);
-                showStatusMessage("Download fehlgeschlagen!", "#db4437");
-            });
+    function downloadAllActiveDatabases() {
+        if (appConfig.activeCompanies.length === 0) {
+            showStatusMessage("Keine Firma aktiv!", "#db4437");
+            return;
+        }
+        showStatusMessage("Lade Datenbanken...", "#ff9800");
+        
+        const promises = appConfig.activeCompanies.map(comp => {
+            return fetch(databaseUrls[comp])
+                .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+                .then(text => parseTextForCompany(text, comp))
+                .catch(err => console.error(`Fehler bei ${comp}:`, err));
+        });
+
+        Promise.all(promises).then(() => {
+            showStatusMessage("Synchronisiert!", "#4caf50");
+            loadAllData();
+            initApp();
+        });
     }
  
     function loadTxtFile(input) {
@@ -530,9 +579,10 @@
         if (!file) return;
         const reader = new FileReader();
         reader.onload = e => {
-            if (parseAndSaveText(e.target.result)) {
-                showStatusMessage("Datenbank lokal geladen!", "#4caf50");
+            if (parseTextForCompany(e.target.result, "db_ice")) {
+                showStatusMessage("DB ICE lokal geladen!", "#4caf50");
                 closeSettings();
+                loadAllData();
                 initApp();
             } else {
                 showStatusMessage("Falsches Format!", "#db4437");
@@ -541,11 +591,31 @@
         reader.readAsText(file);
     }
  
-    function checkFirstStart() {
-        if (trains.length === 0) downloadDatabaseFromServer();
+    function toggleCompany(comp) {
+        const idx = appConfig.activeCompanies.indexOf(comp);
+        if (idx > -1) {
+            appConfig.activeCompanies.splice(idx, 1);
+        } else {
+            appConfig.activeCompanies.push(comp);
+        }
+        saveConfig();
+        loadAllData();
+        initApp();
+    }
+
+    function changeViewMode(mode) {
+        appConfig.viewMode = mode;
+        saveConfig();
+        renderLists();
+    }
+
+    function toggleOusDisplay(checked) {
+        appConfig.showOus = checked;
+        saveConfig();
+        loadAllData();
+        initApp();
     }
  
-    // ── Config ──
     function applyFont(key) {
         if (key === 'bahnhofsblau') {
             document.body.classList.add('font-bahnhofsblau');
@@ -557,6 +627,11 @@
     function applyConfig() {
         document.documentElement.setAttribute('data-theme', appConfig.theme || 'dark');
         document.getElementById('theme-select').value = appConfig.theme || 'dark';
+        document.getElementById('view-mode-select').value = appConfig.viewMode || 'combined';
+
+        document.getElementById('company-db_ice').checked = appConfig.activeCompanies.includes('db_ice');
+        document.getElementById('company-havag').checked = appConfig.activeCompanies.includes('havag');
+        document.getElementById('toggle-ous').checked = appConfig.showOus === true;
  
         const accent = appConfig.accent || '#ea1c24';
         document.documentElement.style.setProperty('--accent-color', accent);
@@ -573,41 +648,21 @@
         try { localStorage.setItem('iceAppConfig_v5', JSON.stringify(appConfig)); } catch(e) {}
     }
  
-    function changeTheme(theme) {
-        appConfig.theme = theme;
-        document.documentElement.setAttribute('data-theme', theme);
-        saveConfig();
-    }
- 
-    function changeAccentColor(color) {
-        appConfig.accent = color;
-        document.documentElement.style.setProperty('--accent-color', color);
-        applyFont(accentKeyMap[color] || 'dbrot');
-        saveConfig();
-    }
- 
-    function toggleTzDisplay(checked) {
-        appConfig.showTz = checked;
-        saveConfig();
-        renderLists();
-    }
- 
-    function toggleHistoryDisplay(checked) {
-        appConfig.showHistory = checked;
-        saveConfig();
-        const section = document.getElementById('history-section');
-        if (section) section.classList.toggle('hidden', !checked);
-    }
+    function changeTheme(theme) { appConfig.theme = theme; document.documentElement.setAttribute('data-theme', theme); saveConfig(); }
+    function changeAccentColor(color) { appConfig.accent = color; document.documentElement.style.setProperty('--accent-color', color); applyFont(accentKeyMap[color] || 'dbrot'); saveConfig(); }
+    function toggleTzDisplay(checked) { appConfig.showTz = checked; saveConfig(); renderLists(); }
+    function toggleHistoryDisplay(checked) { appConfig.showHistory = checked; saveConfig(); const section = document.getElementById('history-section'); if (section) section.classList.toggle('hidden', !checked); }
  
     function clearSightingData() {
-        if (confirm("Alle Sichtungen löschen?")) {
-            spottedTrains = {};
-            try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
+        if (confirm("Alle Sichtungen aller aktiven Unternehmen löschen?")) {
+            appConfig.activeCompanies.forEach(comp => {
+                try { localStorage.removeItem(`spotted_${comp}_v5`); } catch(e) {}
+            });
+            loadAllData();
             initApp();
         }
     }
  
-    // ── App ──
     function ermittleDoppelteNamen() {
         doppelteNamen.clear();
         const gesehen = new Set();
@@ -626,7 +681,6 @@
         renderStats();
     }
  
-    // ── Suche ──
     function showSuggestions(val) {
         const box = document.getElementById('suggestions-box');
         if (!trains.length || !val || val.length < 2) { box.style.display = 'none'; return; }
@@ -639,13 +693,17 @@
         box.innerHTML = "";
         box.style.display = 'block';
         filtered.slice(0, 5).forEach(train => {
-            const doppelt = doppelteNamen.has(train.name.toLowerCase());
             const div = document.createElement('div');
             div.className = "suggestion-item";
-            div.innerText = doppelt ? `${train.name} (${train.type})` : train.name;
+            const tag = appConfig.activeCompanies.length > 1 ? ` [${companyNames[train.company]}]` : '';
+            const ousTag = train.ous ? ' (Ausgemustert)' : '';
+            const brZusatz = doppelteNamen.has(train.name.toLowerCase()) ? ` (${train.type})` : '';
+            
+            div.innerText = `${train.name}${brZusatz}${tag}${ousTag}`;
             div.onclick = () => {
                 document.getElementById('spot-input').value = train.number;
                 box.style.display = 'none';
+                submitSighting();
             };
             box.appendChild(div);
         });
@@ -661,11 +719,22 @@
             if (spottedTrains[found.id]) {
                 showStatusMessage("Schon gesammelt!", "#ff9800");
             } else {
-                spottedTrains[found.id] = new Date().toLocaleString('de-DE');
-                try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
-                showStatusMessage("Gesichtet! 🚄", "#4caf50");
+                const timeStr = new Date().toLocaleString('de-DE');
+                spottedTrains[found.id] = timeStr;
+                
+                const comp = found.company;
+                try {
+                    let localSpotted = {};
+                    const s = localStorage.getItem(`spotted_${comp}_v5`);
+                    if (s) localSpotted = JSON.parse(s);
+                    localSpotted[found.id] = timeStr;
+                    localStorage.setItem(`spotted_${comp}_v5`, JSON.stringify(localSpotted));
+                } catch(e) {}
+ 
+                showStatusMessage("Gesichtet! ✔", "#4caf50");
                 inputEl.value = "";
                 document.getElementById('suggestions-box').style.display = 'none';
+                loadAllData();
                 initApp();
             }
         } else {
@@ -675,31 +744,35 @@
  
     function showStatusMessage(text, bgColor) {
         const el = document.getElementById('message');
-        el.innerText = text;
-        el.style.backgroundColor = bgColor;
-        el.style.display = 'block';
+        el.innerText = text; el.style.backgroundColor = bgColor; el.style.display = 'block';
         setTimeout(() => { el.style.display = 'none'; }, 3000);
     }
  
-    function removeSighting(id) {
-        delete spottedTrains[id];
-        try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
+    function removeSighting(id, comp) {
+        try {
+            let localSpotted = {};
+            const s = localStorage.getItem(`spotted_${comp}_v5`);
+            if (s) localSpotted = JSON.parse(s);
+            delete localSpotted[id];
+            localStorage.setItem(`spotted_${comp}_v5`, JSON.stringify(localSpotted));
+        } catch(e) {}
+        loadAllData();
         initApp();
     }
  
-    // ── Render ──
     function renderStats() {
-        if (!trains.length) return;
+        if (!trains.length) {
+            document.getElementById('stats-counter').innerText = "Keine aktiven Daten";
+            return;
+        }
         const spottedCount = trains.filter(t => spottedTrains[t.id]).length;
         const missingCount = trains.length - spottedCount;
         const percent = Math.round((spottedCount / trains.length) * 100) || 0;
  
         document.getElementById('stats-counter').innerText = `Gesamtfortschritt: ${percent}%`;
         document.getElementById('progress-fill').style.width = percent + '%';
-        document.getElementById('count-spotted').innerText = spottedCount;
-        document.getElementById('count-missing').innerText = missingCount;
-        document.getElementById('title-count-missing').innerText = missingCount;
-        document.getElementById('title-count-spotted').innerText = spottedCount;
+        if(document.getElementById('count-spotted')) document.getElementById('count-spotted').innerText = spottedCount;
+        if(document.getElementById('count-missing')) document.getElementById('count-missing').innerText = missingCount;
  
         const historyContainer = document.getElementById('history-container');
         historyContainer.innerHTML = "";
@@ -709,39 +782,113 @@
             .reverse();
  
         if (!historyArray.length) {
-            historyContainer.innerHTML = `<li style="color:#888; font-style:italic;">Noch keine Züge gesichtet.</li>`;
+            historyContainer.innerHTML = `<li style="color:#888; font-style:italic;">Noch keine Sichtungen vorhanden.</li>`;
             return;
         }
         historyArray.forEach(train => {
             const li = document.createElement('li');
             li.className = "history-item";
             const tz = appConfig.showTz ? ` (${train.number})` : '';
-            li.innerHTML = `<span><strong>${train.name}</strong>${tz}</span><span style="color:var(--text-muted); font-size:0.82rem;">${train.spottedAt}</span>`;
+            const tag = appConfig.activeCompanies.length > 1 ? ` <small style='color:var(--text-muted)'>[${companyNames[train.company]}]</small>` : '';
+            const ousTag = train.ous ? ' <small style="color:#ff9800;">[AUS]</small>' : '';
+            const brZusatz = doppelteNamen.has(train.name.toLowerCase()) ? ` <small style="color:var(--text-muted)">(${train.type})</small>` : '';
+            li.innerHTML = `<span><strong>${train.name}</strong>${brZusatz}${tz}${tag}${ousTag}</span><span style="color:var(--text-muted); font-size:0.82rem;">${train.spottedAt}</span>`;
             historyContainer.appendChild(li);
         });
     }
  
-    function renderLists() {
-        const mc = document.getElementById('missing-container');
-        const sc = document.getElementById('spotted-container');
-        mc.innerHTML = ""; sc.innerHTML = "";
-        trains.forEach(train => {
-            const spotted = !!spottedTrains[train.id];
-            const card = document.createElement('div');
-            card.className = `train-card${spotted ? ' spotted' : ''}`;
-            const tz = appConfig.showTz ? ` · Tz ${train.number}` : '';
-            if (spotted) {
-                card.innerHTML = `<div class="train-info"><div class="train-name">${train.name}</div><div class="train-meta">${train.type}${tz}</div></div><button class="delete-btn" onclick="removeSighting('${train.id}')">✕</button>`;
-                sc.appendChild(card);
-            } else {
-                card.innerHTML = `<div class="train-info"><div class="train-name">${train.name}</div><div class="train-meta">${train.type}${tz}</div></div>`;
-                mc.appendChild(card);
-            }
-        });
+    function createCardElement(train, spotted) {
+        const card = document.createElement('div');
+        card.className = `train-card${spotted ? ' spotted' : ''}`;
+        const tz = appConfig.showTz ? ` · Nummer ${train.number}` : '';
+        const compTag = appConfig.activeCompanies.length > 1 ? ` · ${companyNames[train.company]}` : '';
+        const ousTag = train.ous ? ' · ⚠️ AUSGEMUSTERT' : '';
+        const nameAnzeige = doppelteNamen.has(train.name.toLowerCase()) ? `${train.name} (${train.type})` : train.name;
+        
+        if (spotted) {
+            card.innerHTML = `<div class="train-info"><div class="train-name">${nameAnzeige}</div><div class="train-meta">${train.type}${tz}${compTag}${ousTag}</div></div><button class="delete-btn" onclick="removeSighting('${train.id}', '${train.company}')">✕</button>`;
+        } else {
+            card.innerHTML = `<div class="train-info"><div class="train-name">${nameAnzeige}</div><div class="train-meta">${train.type}${tz}${compTag}${ousTag}</div></div>`;
+        }
+        return card;
     }
  
-    initApp();
-    checkFirstStart();
+    function renderLists() {
+        const container = document.getElementById('dynamic-lists-container');
+        container.innerHTML = "";
+ 
+        if (trains.length === 0) {
+            container.innerHTML = "<p style='text-align:center; color:var(--text-muted);'>Keine Unternehmen aktiv oder keine Daten geladen.</p>";
+            return;
+        }
+ 
+        if (appConfig.viewMode === "combined") {
+            const missingCount = trains.filter(t => !spottedTrains[t.id]).length;
+            const spottedCount = trains.filter(t => spottedTrains[t.id]).length;
+ 
+            const detailsMissing = document.createElement('details');
+            detailsMissing.open = true;
+            detailsMissing.innerHTML = `<summary>Noch offen (<span>${missingCount}</span>)</summary><div class="accordion-content"></div>`;
+            
+            const detailsSpotted = document.createElement('details');
+            detailsSpotted.innerHTML = `<summary>Gesehen &amp; Gesammelt (<span>${spottedCount}</span>)</summary><div class="accordion-content"></div>`;
+ 
+            const mc = detailsMissing.querySelector('.accordion-content');
+            const sc = detailsSpotted.querySelector('.accordion-content');
+ 
+            trains.forEach(train => {
+                const spotted = !!spottedTrains[train.id];
+                const card = createCardElement(train, spotted);
+                if (spotted) sc.appendChild(card); else mc.appendChild(card);
+            });
+ 
+            container.appendChild(detailsMissing);
+            container.appendChild(detailsSpotted);
+        } else {
+            appConfig.activeCompanies.forEach(comp => {
+                const compTrains = companyData[comp] || [];
+                const filteredCompTrains = compTrains.filter(t => appConfig.showOus || !t.ous);
+                if (filteredCompTrains.length === 0) return;
+ 
+                const missingCount = filteredCompTrains.filter(t => !spottedTrains[t.id]).length;
+                const spottedCount = filteredCompTrains.filter(t => spottedTrains[t.id]).length;
+ 
+                const compHeader = document.createElement('h3');
+                compHeader.style.margin = "20px 0 10px 0";
+                compHeader.style.color = "var(--accent-color)";
+                compHeader.innerText = companyNames[comp];
+                container.appendChild(compHeader);
+ 
+                const detailsMissing = document.createElement('details');
+                detailsMissing.open = true;
+                detailsMissing.innerHTML = `<summary>Offen · ${companyNames[comp]} (<span>${missingCount}</span>)</summary><div class="accordion-content"></div>`;
+                
+                const detailsSpotted = document.createElement('details');
+                detailsSpotted.innerHTML = `<summary>Gesehen · ${companyNames[comp]} (<span>${spottedCount}</span>)</summary><div class="accordion-content"></div>`;
+ 
+                const mc = detailsMissing.querySelector('.accordion-content');
+                const sc = detailsSpotted.querySelector('.accordion-content');
+ 
+                filteredCompTrains.forEach(train => {
+                    const spotted = !!spottedTrains[train.id];
+                    const card = createCardElement(train, spotted);
+                    if (spotted) sc.appendChild(card); else mc.appendChild(card);
+                });
+ 
+                container.appendChild(detailsMissing);
+                container.appendChild(detailsSpotted);
+            });
+        }
+    }
+ 
+    loadAllData();
+ 
+    const mussLaden = appConfig.activeCompanies.some(comp => !companyData[comp] || companyData[comp].length === 0);
+    if (mussLaden) {
+        downloadAllActiveDatabases();
+    } else {
+        initApp();
+    }
 </script>
 </body>
 </html>
