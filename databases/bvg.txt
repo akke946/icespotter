@@ -1,0 +1,240 @@
+bvg_u_1001;1001;U-Bahn 1001;HK-Zug
+bvg_u_1002;1002;U-Bahn 1002;HK-Zug
+bvg_u_1003;1003;U-Bahn 1003;HK-Zug
+bvg_u_1004;1004;U-Bahn 1004;HK-Zug
+bvg_u_1005;1005;U-Bahn 1005;HK-Zug
+bvg_u_1006;1006;U-Bahn 1006;HK-Zug
+bvg_u_1007;1007;U-Bahn 1007;HK-Zug
+bvg_u_1008;1008;U-Bahn 1008;HK-Zug
+bvg_u_1009;1009;U-Bahn 1009;HK-Zug
+bvg_u_1010;1010;U-Bahn 1010;HK-Zug
+bvg_u_1011;1011;U-Bahn 1011;HK-Zug
+bvg_u_1012;1012;U-Bahn 1012;HK-Zug
+bvg_u_1013;1013;U-Bahn 1013;HK-Zug
+bvg_u_1014;1014;U-Bahn 1014;HK-Zug
+bvg_u_1015;1015;U-Bahn 1015;HK-Zug
+bvg_u_1016;1016;U-Bahn 1016;HK-Zug
+bvg_u_1017;1017;U-Bahn 1017;IK-Zug
+bvg_u_1018;1018;U-Bahn 1018;IK-Zug
+bvg_u_1019;1019;U-Bahn 1019;IK-Zug
+bvg_u_1020;1020;U-Bahn 1020;IK-Zug
+bvg_u_1021;1021;U-Bahn 1021;IK-Zug
+bvg_u_1022;1022;U-Bahn 1022;IK-Zug
+bvg_u_1023;1023;U-Bahn 1023;IK-Zug
+bvg_u_1024;1024;U-Bahn 1024;IK-Zug
+bvg_u_1025;1025;U-Bahn 1025;IK-Zug
+bvg_u_1026;1026;U-Bahn 1026;IK-Zug
+bvg_u_1027;1027;U-Bahn 1027;IK-Zug
+bvg_u_1028;1028;U-Bahn 1028;IK-Zug
+bvg_u_1029;1029;U-Bahn 1029;IK-Zug
+bvg_u_1030;1030;U-Bahn 1030;IK-Zug
+bvg_u_1031;1031;U-Bahn 1031;IK-Zug
+bvg_u_1032;1032;U-Bahn 1032;IK-Zug
+bvg_u_1033;1033;U-Bahn 1033;IK-Zug
+bvg_u_1034;1034;U-Bahn 1034;IK-Zug
+bvg_u_1035;1035;U-Bahn 1035;IK-Zug
+bvg_u_1036;1036;U-Bahn 1036;IK-Zug
+bvg_u_1037;1037;U-Bahn 1037;IK-Zug
+bvg_u_1038;1038;U-Bahn 1038;IK-Zug
+bvg_u_1039;1039;U-Bahn 1039;IK-Zug
+bvg_u_1040;1040;U-Bahn 1040;IK-Zug
+bvg_u_1041;1041;U-Bahn 1041;IK-Zug
+bvg_u_1042;1042;U-Bahn 1042;IK-Zug
+bvg_u_1043;1043;U-Bahn 1043;IK-Zug
+bvg_u_1044;1044;U-Bahn 1044;IK-Zug
+bvg_u_1045;1045;U-Bahn 1045;IK-Zug
+bvg_u_1046;1046;U-Bahn 1046;IK-Zug
+bvg_u_1047;1047;U-Bahn 1047;IK-Zug
+bvg_u_1048;1048;U-Bahn 1048;IK-Zug
+bvg_u_1049;1049;U-Bahn 1049;IK-Zug
+bvg_u_1050;1050;U-Bahn 1050;IK-Zug
+bvg_u_1051;1051;U-Bahn 1051;IK-Zug
+bvg_u_1052;1052;U-Bahn 1052;IK-Zug
+bvg_u_1053;1053;U-Bahn 1053;IK-Zug
+bvg_u_1054;1054;U-Bahn 1054;IK-Zug
+bvg_u_5001;5001;U-Bahn 5001;H-Zug
+bvg_u_5002;5002;U-Bahn 5002;H-Zug
+bvg_u_5003;5003;U-Bahn 5003;H-Zug
+bvg_u_5004;5004;U-Bahn 5004;H-Zug
+bvg_u_5005;5005;U-Bahn 5005;H-Zug
+bvg_u_5006;5006;U-Bahn 5006;H-Zug
+bvg_u_5007;5007;U-Bahn 5007;H-Zug
+bvg_u_5008;5008;U-Bahn 5008;H-Zug
+bvg_u_5009;5009;U-Bahn 5009;H-Zug
+bvg_u_5010;5010;U-Bahn 5010;H-Zug
+bvg_u_5011;5011;U-Bahn 5011;H-Zug
+bvg_u_5012;5012;U-Bahn 5012;H-Zug
+bvg_u_5013;5013;U-Bahn 5013;H-Zug
+bvg_u_5014;5014;U-Bahn 5014;H-Zug
+bvg_u_5015;5015;U-Bahn 5015;H-Zug
+bvg_u_5016;5016;U-Bahn 5016;H-Zug
+bvg_u_5017;5017;U-Bahn 5017;H-Zug
+bvg_u_5018;5018;U-Bahn 5018;H-Zug
+bvg_u_5019;5019;U-Bahn 5019;H-Zug
+bvg_u_5020;5020;U-Bahn 5020;H-Zug
+bvg_u_5021;5021;U-Bahn 5021;H-Zug
+bvg_u_5022;5022;U-Bahn 5022;H-Zug
+bvg_u_5023;5023;U-Bahn 5023;H-Zug
+bvg_u_5024;5024;U-Bahn 5024;H-Zug
+bvg_u_5025;5025;U-Bahn 5025;H-Zug
+bvg_u_5026;5026;U-Bahn 5026;H-Zug
+bvg_u_5027;5027;U-Bahn 5027;H-Zug
+bvg_u_5028;5028;U-Bahn 5028;H-Zug
+bvg_u_5029;5029;U-Bahn 5029;H-Zug
+bvg_u_5030;5030;U-Bahn 5030;H-Zug
+bvg_u_5031;5031;U-Bahn 5031;H-Zug
+bvg_u_5032;5032;U-Bahn 5032;H-Zug
+bvg_u_5033;5033;U-Bahn 5033;H-Zug
+bvg_u_5034;5034;U-Bahn 5034;H-Zug
+bvg_u_5035;5035;U-Bahn 5035;H-Zug
+bvg_u_5036;5036;U-Bahn 5036;H-Zug
+bvg_u_5037;5037;U-Bahn 5037;H-Zug
+bvg_u_5038;5038;U-Bahn 5038;H-Zug
+bvg_u_5039;5039;U-Bahn 5039;H-Zug
+bvg_u_5040;5040;U-Bahn 5040;H-Zug
+bvg_u_5041;5041;U-Bahn 5041;H-Zug
+bvg_u_5042;5042;U-Bahn 5042;H-Zug
+bvg_u_5043;5043;U-Bahn 5043;H-Zug
+bvg_u_5044;5044;U-Bahn 5044;H-Zug
+bvg_u_5045;5045;U-Bahn 5045;H-Zug
+bvg_u_5046;5046;U-Bahn 5046;H-Zug
+bvg_t_1001;1001;Tram 1001;GT6N
+bvg_t_1002;1002;Tram 1002;GT6N
+bvg_t_1003;1003;Tram 1003;GT6N
+bvg_t_1004;1004;Tram 1004;GT6N
+bvg_t_1005;1005;Tram 1005;GT6N
+bvg_t_1006;1006;Tram 1006;GT6N
+bvg_t_1007;1007;Tram 1007;GT6N
+bvg_t_1008;1008;Tram 1008;GT6N
+bvg_t_1009;1009;Tram 1009;GT6N
+bvg_t_1010;1010;Tram 1010;GT6N
+bvg_t_1011;1011;Tram 1011;GT6N
+bvg_t_1012;1012;Tram 1012;GT6N
+bvg_t_1013;1013;Tram 1013;GT6N
+bvg_t_1014;1014;Tram 1014;GT6N
+bvg_t_1015;1015;Tram 1015;GT6N
+bvg_t_1016;1016;Tram 1016;GT6N
+bvg_t_1017;1017;Tram 1017;GT6N
+bvg_t_1018;1018;Tram 1018;GT6N
+bvg_t_1019;1019;Tram 1019;GT6N
+bvg_t_1020;1020;Tram 1020;GT6N
+bvg_t_1021;1021;Tram 1021;GT6N
+bvg_t_1022;1022;Tram 1022;GT6N
+bvg_t_1023;1023;Tram 1023;GT6N
+bvg_t_1024;1024;Tram 1024;GT6N
+bvg_t_1025;1025;Tram 1025;GT6N
+bvg_t_1026;1026;Tram 1026;GT6N
+bvg_t_1027;1027;Tram 1027;GT6N
+bvg_t_1028;1028;Tram 1028;GT6N
+bvg_t_1029;1029;Tram 1029;GT6N
+bvg_t_1030;1030;Tram 1030;GT6N
+bvg_t_1031;1031;Tram 1031;GT6N
+bvg_t_1032;1032;Tram 1032;GT6N
+bvg_t_1033;1033;Tram 1033;GT6N
+bvg_t_1034;1034;Tram 1034;GT6N
+bvg_t_1035;1035;Tram 1035;GT6N
+bvg_t_1036;1036;Tram 1036;GT6N
+bvg_t_1037;1037;Tram 1037;GT6N
+bvg_t_1038;1038;Tram 1038;GT6N
+bvg_t_1039;1039;Tram 1039;GT6N
+bvg_t_1040;1040;Tram 1040;GT6N
+bvg_t_1041;1041;Tram 1041;GT6N
+bvg_t_1042;1042;Tram 1042;GT6N
+bvg_t_1043;1043;Tram 1043;GT6N
+bvg_t_1044;1044;Tram 1044;GT6N
+bvg_t_1045;1045;Tram 1045;GT6N
+bvg_t_1046;1046;Tram 1046;GT6N
+bvg_t_1047;1047;Tram 1047;GT6N
+bvg_t_1048;1048;Tram 1048;GT6N
+bvg_t_1049;1049;Tram 1049;GT6N
+bvg_t_1050;1050;Tram 1050;GT6N
+bvg_t_1501;1501;Tram 1501;GT6N-ZR
+bvg_t_1502;1502;Tram 1502;GT6N-ZR
+bvg_t_1503;1503;Tram 1503;GT6N-ZR
+bvg_t_1504;1504;Tram 1504;GT6N-ZR
+bvg_t_1505;1505;Tram 1505;GT6N-ZR
+bvg_t_1506;1506;Tram 1506;GT6N-ZR
+bvg_t_1507;1507;Tram 1507;GT6N-ZR
+bvg_t_1508;1508;Tram 1508;GT6N-ZR
+bvg_t_1509;1509;Tram 1509;GT6N-ZR
+bvg_t_1510;1510;Tram 1510;GT6N-ZR
+bvg_t_1511;1511;Tram 1511;GT6N-ZR
+bvg_t_1512;1512;Tram 1512;GT6N-ZR
+bvg_t_1513;1513;Tram 1513;GT6N-ZR
+bvg_t_1514;1514;Tram 1514;GT6N-ZR
+bvg_t_1515;1515;Tram 1515;GT6N-ZR
+bvg_t_1516;1516;Tram 1516;GT6N-ZR
+bvg_t_1517;1517;Tram 1517;GT6N-ZR
+bvg_t_1518;1518;Tram 1518;GT6N-ZR
+bvg_t_1519;1519;Tram 1519;GT6N-ZR
+bvg_t_1520;1520;Tram 1520;GT6N-ZR
+bvg_t_1521;1521;Tram 1521;GT6N-ZR
+bvg_t_1522;1522;Tram 1522;GT6N-ZR
+bvg_t_1523;1523;Tram 1523;GT6N-ZR
+bvg_t_1524;1524;Tram 1524;GT6N-ZR
+bvg_t_1525;1525;Tram 1525;GT6N-ZR
+bvg_t_1526;1526;Tram 1526;GT6N-ZR
+bvg_t_1527;1527;Tram 1527;GT6N-ZR
+bvg_t_1528;1528;Tram 1528;GT6N-ZR
+bvg_t_1529;1529;Tram 1529;GT6N-ZR
+bvg_t_1530;1530;Tram 1530;GT6N-ZR
+bvg_t_1531;1531;Tram 1531;GT6N-ZR
+bvg_t_1532;1532;Tram 1532;GT6N-ZR
+bvg_t_1533;1533;Tram 1533;GT6N-ZR
+bvg_t_1534;1534;Tram 1534;GT6N-ZR
+bvg_t_1535;1535;Tram 1535;GT6N-ZR
+bvg_t_1536;1536;Tram 1536;GT6N-ZR
+bvg_t_1537;1537;Tram 1537;GT6N-ZR
+bvg_t_1538;1538;Tram 1538;GT6N-ZR
+bvg_t_1539;1539;Tram 1539;GT6N-ZR
+bvg_t_1540;1540;Tram 1540;GT6N-ZR
+bvg_t_1541;1541;Tram 1541;GT6N-ZR
+bvg_t_1542;1542;Tram 1542;GT6N-ZR
+bvg_t_1543;1543;Tram 1543;GT6N-ZR
+bvg_t_1544;1544;Tram 1544;GT6N-ZR
+bvg_t_1545;1545;Tram 1545;GT6N-ZR
+bvg_t_1546;1546;Tram 1546;GT6N-ZR
+bvg_t_1547;1547;Tram 1547;GT6N-ZR
+bvg_t_1548;1548;Tram 1548;GT6N-ZR
+bvg_t_1549;1549;Tram 1549;GT6N-ZR
+bvg_t_1550;1550;Tram 1550;GT6N-ZR
+bvg_t_4001;4001;Tram 4001;Flexity Berlin
+bvg_t_4002;4002;Tram 4002;Flexity Berlin
+bvg_t_4003;4003;Tram 4003;Flexity Berlin
+bvg_t_4004;4004;Tram 4004;Flexity Berlin
+bvg_t_4005;4005;Tram 4005;Flexity Berlin
+bvg_t_4006;4006;Tram 4006;Flexity Berlin
+bvg_t_4007;4007;Tram 4007;Flexity Berlin
+bvg_t_4008;4008;Tram 4008;Flexity Berlin
+bvg_t_4009;4009;Tram 4009;Flexity Berlin
+bvg_t_4010;4010;Tram 4010;Flexity Berlin
+bvg_t_4011;4011;Tram 4011;Flexity Berlin
+bvg_t_4012;4012;Tram 4012;Flexity Berlin
+bvg_t_4013;4013;Tram 4013;Flexity Berlin
+bvg_t_4014;4014;Tram 4014;Flexity Berlin
+bvg_t_4015;4015;Tram 4015;Flexity Berlin
+bvg_t_4016;4016;Tram 4016;Flexity Berlin
+bvg_t_4017;4017;Tram 4017;Flexity Berlin
+bvg_t_4018;4018;Tram 4018;Flexity Berlin
+bvg_t_4019;4019;Tram 4019;Flexity Berlin
+bvg_t_4020;4020;Tram 4020;Flexity Berlin
+bvg_t_4021;4021;Tram 4021;Flexity Berlin
+bvg_t_4022;4022;Tram 4022;Flexity Berlin
+bvg_t_4023;4023;Tram 4023;Flexity Berlin
+bvg_t_4024;4024;Tram 4024;Flexity Berlin
+bvg_t_4025;4025;Tram 4025;Flexity Berlin
+bvg_t_4026;4026;Tram 4026;Flexity Berlin
+bvg_t_4027;4027;Tram 4027;Flexity Berlin
+bvg_t_4028;4028;Tram 4028;Flexity Berlin
+bvg_t_4029;4029;Tram 4029;Flexity Berlin
+bvg_t_4030;4030;Tram 4030;Flexity Berlin
+bvg_t_4031;4031;Tram 4031;Flexity Berlin
+bvg_t_4032;4032;Tram 4032;Flexity Berlin
+bvg_t_4033;4033;Tram 4033;Flexity Berlin
+bvg_t_4034;4034;Tram 4034;Flexity Berlin
+bvg_t_4035;4035;Tram 4035;Flexity Berlin
+bvg_t_4036;4036;Tram 4036;Flexity Berlin
+bvg_t_4037;4037;Tram 4037;Flexity Berlin
+bvg_t_4038;4038;Tram 4038;Flexity Berlin
+bvg_t_4039;4039;Tram 4039;Flexity Berlin
+bvg_t_4040;4040;Tram 4040;Flexity Berlin
