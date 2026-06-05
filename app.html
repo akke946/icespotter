@@ -14,8 +14,8 @@
             font-style: normal;
         }
         @font-face {
-            font-family: 'Arrow-Sign';
-            src: url('fonts/UULREJ-Arrow-SignMediumPos.ttf') format('truetype');
+            font-family: 'Oswald';
+            src: url('fonts/Oswald-VariableFont_wght.ttf') format('truetype');
             font-weight: 100 900;
             font-style: normal;
         }
@@ -32,7 +32,7 @@
         body.font-bahnhofsblau input,
         body.font-bahnhofsblau select,
         body.font-bahnhofsblau .msg-box {
-            font-family: 'Arrow-Sign', 'Arial Narrow', sans-serif !important;
+            font-family: 'Oswald', 'Arial Narrow', sans-serif !important;
             letter-spacing: 0.07em;
         }
  
@@ -345,7 +345,7 @@
  
 <header>
     <h1>ÖPNV &amp; ICE Spotter</h1>
-    <div class="header-subtitle">Taufnamen-Sammler · Deutsche Bahn &amp; HAVAG</div>
+    <div class="header-subtitle">Taufnamen-Sammler · Schienenfahrzeuge</div>
     <button class="settings-btn" id="settings-toggle-btn">⚙️</button>
     <div class="stats" id="stats-counter">Bereit</div>
     <div class="header-progress-bar">
@@ -409,6 +409,9 @@
             <div style="display:flex; flex-direction:column; gap:6px; text-align:right;">
                 <label><input type="checkbox" id="company-db_ice" checked onchange="toggleCompany('db_ice')" style="margin-right:5px;"> DB (ICE)</label>
                 <label><input type="checkbox" id="company-havag" checked onchange="toggleCompany('havag')" style="margin-right:5px;"> HAVAG (Tram)</label>
+                <label><input type="checkbox" id="company-bvg" checked onchange="toggleCompany('bvg')" style="margin-right:5px;"> BVG (U-Bahn/Tram)</label>
+                <label><input type="checkbox" id="company-mvv" checked onchange="toggleCompany('mvv')" style="margin-right:5px;"> MVV (U-Bahn/Tram)</label>
+                <label><input type="checkbox" id="company-hvv" checked onchange="toggleCompany('hvv')" style="margin-right:5px;"> HVV (U-Bahn)</label>
             </div>
         </div>
 
@@ -456,7 +459,7 @@
  
 <script>
     let trains = []; 
-    let companyData = { db_ice: [], havag: [] }; 
+    let companyData = { db_ice: [], havag: [], bvg: [], mvv: [], hvv: [] }; 
     let spottedTrains = {}; 
     let doppelteNamen = new Set();
     let settingsOpen = false;
@@ -478,14 +481,21 @@
         "#903373": "ersatz"
     };
 
+    // Hinweis: Ersetze diese URLs durch deine eigenen Pfade, sobald du die TXT-Dateien hochgeladen hast
     const databaseUrls = {
         db_ice: "https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/3e2918e99f053b487adb25253897260390e15c9a/gistfile1.txt",
-        havag: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/havag.txt"
+        havag: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/havag.txt",
+        bvg: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/bvg.txt",
+        mvv: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/mvv.txt",
+        hvv: "https://raw.githubusercontent.com/akke946/icespotter/refs/heads/main/databases/hvv.txt"
     };
 
     const companyNames = {
         db_ice: "Deutsche Bahn",
-        havag: "HAVAG"
+        havag: "Hallesche Verkehrs-AG",
+        bvg: "Berliner Verkehrsbetriebe",
+        mvv: "Münchner Verkehrsverbund",
+        hvv: "Hamburger Verkehrsverbund"
     };
  
     try { const s = localStorage.getItem('iceAppConfig_v5'); if (s) appConfig = { ...appConfig, ...JSON.parse(s) }; } catch(e) {}
@@ -494,7 +504,7 @@
         trains = [];
         spottedTrains = {};
         
-        ["db_ice", "havag"].forEach(comp => {
+        ["db_ice", "havag", "bvg", "mvv", "hvv"].forEach(comp => {
             try { 
                 const s = localStorage.getItem(`spotted_${comp}_v5`); 
                 if (s) {
@@ -631,6 +641,9 @@
 
         document.getElementById('company-db_ice').checked = appConfig.activeCompanies.includes('db_ice');
         document.getElementById('company-havag').checked = appConfig.activeCompanies.includes('havag');
+        document.getElementById('company-bvg').checked = appConfig.activeCompanies.includes('bvg');
+        document.getElementById('company-mvv').checked = appConfig.activeCompanies.includes('mvv');
+        document.getElementById('company-hvv').checked = appConfig.activeCompanies.includes('hvv');
         document.getElementById('toggle-ous').checked = appConfig.showOus === true;
  
         const accent = appConfig.accent || '#ea1c24';
