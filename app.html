@@ -19,22 +19,8 @@
             font-weight: 100 900;
             font-style: normal;
         }
-
-        :root {
-            --db-red: #ea1c24;
-            --bg-dark: #121212;
-            --card-bg: #1e1e1e;
-            --text-main: #e0e0e0;
-            --text-muted: #aaa;
-            --border-color: #333;
-            --input-bg: #2a2a2a;
-            --accent-color: var(--db-red);
-            --header-text: #ffffff;
-            --font-main: 'DB Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            --font-display: 'DB Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
-
-        /* ── Schriftart Bahnhofsblau ── */
+ 
+        /* Bahnhofsblau → Oswald auf allen relevanten Elementen */
         body.font-bahnhofsblau,
         body.font-bahnhofsblau h1,
         body.font-bahnhofsblau h2,
@@ -45,12 +31,23 @@
         body.font-bahnhofsblau .train-name,
         body.font-bahnhofsblau .countdown-number,
         body.font-bahnhofsblau input,
-        body.font-bahnhofsblau select {
+        body.font-bahnhofsblau select,
+        body.font-bahnhofsblau .msg-box {
             font-family: 'Oswald', 'Arial Narrow', sans-serif !important;
             letter-spacing: 0.07em;
         }
+ 
+        :root {
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #aaa;
+            --border-color: #333;
+            --input-bg: #2a2a2a;
+            --accent-color: #ea1c24;
+            --header-text: #ffffff;
         }
-
+ 
         [data-theme="light"] {
             --bg-dark: #f0f0f0;
             --card-bg: #ffffff;
@@ -59,21 +56,19 @@
             --border-color: #cccccc;
             --input-bg: #e8e8e8;
         }
-
+ 
         * { box-sizing: border-box; }
-
+ 
         body {
-            font-family: var(--font-main);
+            font-family: 'DB Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
             margin: 0;
             padding: 0 0 20px 0;
             transition: background-color 0.3s, color 0.3s;
         }
-
-        /* ══════════════════════════════
-           HEADER – farbig gefüllt
-        ══════════════════════════════ */
+ 
+        /* ── HEADER ── */
         header {
             background-color: var(--accent-color);
             padding: 20px 20px 18px 20px;
@@ -81,30 +76,22 @@
             position: relative;
             transition: background-color 0.4s;
         }
-
         header h1 {
-            font-family: var(--font-display);
+            font-family: inherit;
             font-size: 1.6rem;
             font-weight: 700;
-            color: var(--header-text);
+            color: #fff;
             margin: 0 40px 4px 0;
             letter-spacing: 0.03em;
             text-transform: uppercase;
         }
-
-        [data-accent="bahnhofsblau"] header h1 {
-            letter-spacing: 0.08em;
-        }
-
         .header-subtitle {
-            font-family: var(--font-main);
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.75);
-            letter-spacing: 0.05em;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.72);
+            letter-spacing: 0.06em;
             text-transform: uppercase;
             margin-bottom: 14px;
         }
-
         .settings-btn {
             position: absolute;
             top: 18px;
@@ -116,26 +103,23 @@
             color: white;
             outline: none;
             border-radius: 6px;
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background 0.2s;
         }
         .settings-btn:hover { background: rgba(0,0,0,0.35); }
-
+ 
         .stats {
-            font-family: var(--font-display);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: rgba(255,255,255,0.85);
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
-
-        /* Fortschrittsbalken im Header */
         .header-progress-bar {
             width: 100%;
             height: 5px;
@@ -151,7 +135,6 @@
             transition: width 0.6s ease;
             width: 0%;
         }
-
         .countdown-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -164,25 +147,22 @@
             border-radius: 6px;
         }
         .countdown-number {
-            font-family: var(--font-display);
             font-size: 2rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #fff;
             line-height: 1;
         }
         .countdown-label {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.75);
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.72);
             text-transform: uppercase;
             letter-spacing: 0.06em;
             margin-top: 3px;
         }
-
-        /* ══════════════════════════════
-           MAIN CONTENT PADDING
-        ══════════════════════════════ */
+ 
+        /* ── MAIN ── */
         .main-content { padding: 0 15px; }
-
+ 
         .section-box {
             background-color: var(--card-bg);
             padding: 15px;
@@ -191,9 +171,8 @@
             border-left: 4px solid var(--accent-color);
             transition: border-color 0.4s;
         }
-
+ 
         h2 {
-            font-family: var(--font-display);
             margin: 0 0 10px 0;
             font-size: 1.1rem;
             color: var(--text-main);
@@ -201,21 +180,16 @@
             letter-spacing: 0.04em;
         }
         h3 {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-top: 14px;
             margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.04em;
             color: var(--text-muted);
         }
-
-        /* ══════════════════════════════
-           EINSTELLUNGEN
-        ══════════════════════════════ */
+ 
+        /* ── SETTINGS ── */
         .settings-box { display: none; }
-
-        .setting-row { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
         .setting-row-inline {
             display: flex;
             justify-content: space-between;
@@ -223,21 +197,19 @@
             margin-bottom: 12px;
             font-size: 0.95rem;
         }
-
-        /* ══════════════════════════════
-           INPUTS & BUTTONS
-        ══════════════════════════════ */
+ 
+        /* ── INPUTS & BUTTONS ── */
         .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
         .input-group { display: flex; gap: 10px; }
-
+ 
         input, select {
-            font-family: var(--font-main);
             background: var(--input-bg);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             padding: 12px;
             border-radius: 6px;
             font-size: 1rem;
+            font-family: inherit;
             transition: border-color 0.2s;
         }
         input:focus, select:focus {
@@ -245,9 +217,8 @@
             border-color: var(--accent-color);
         }
         input { flex-grow: 1; }
-
+ 
         .btn {
-            font-family: var(--font-display);
             background: var(--accent-color);
             color: white;
             border: none;
@@ -258,17 +229,16 @@
             font-size: 0.95rem;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            transition: background 0.2s, opacity 0.2s;
+            font-family: inherit;
+            transition: opacity 0.2s;
             white-space: nowrap;
         }
         .btn:hover { opacity: 0.88; }
         .btn-secondary { background: #3a8a3e; }
         .btn-danger { background: #b71c1c; }
         .btn-small { padding: 7px 13px; font-size: 0.8rem; margin-right: 5px; margin-bottom: 5px; }
-
-        /* ══════════════════════════════
-           AUTOCOMPLETE
-        ══════════════════════════════ */
+ 
+        /* ── AUTOCOMPLETE ── */
         .suggestions {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -286,10 +256,8 @@
         }
         .suggestion-item:last-child { border-bottom: none; }
         .suggestion-item:hover { background: var(--input-bg); }
-
-        /* ══════════════════════════════
-           AKKORDEON / LISTEN
-        ══════════════════════════════ */
+ 
+        /* ── AKKORDEON ── */
         details {
             background: var(--card-bg);
             margin-bottom: 15px;
@@ -299,7 +267,6 @@
         }
         summary {
             padding: 14px 16px;
-            font-family: var(--font-display);
             font-weight: 600;
             font-size: 1rem;
             letter-spacing: 0.04em;
@@ -310,6 +277,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-family: inherit;
         }
         summary::before {
             content: '▶';
@@ -318,14 +286,15 @@
             transition: transform 0.2s;
         }
         details[open] summary::before { transform: rotate(90deg); }
-
+ 
         .accordion-content {
             padding: 10px;
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
-
+ 
+        /* ── ZUGKARTEN ── */
         .train-card {
             background: var(--input-bg);
             padding: 12px 14px;
@@ -334,24 +303,12 @@
             align-items: center;
             gap: 12px;
             border: 1px solid var(--border-color);
-            transition: border-color 0.3s;
         }
-        .train-card.spotted {
-            border-left: 3px solid var(--accent-color);
-        }
+        .train-card.spotted { border-left: 3px solid var(--accent-color); }
         .train-info { flex-grow: 1; }
-        .train-name {
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.02em;
-        }
-        .train-meta {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
+        .train-name { font-weight: 600; font-size: 1rem; }
+        .train-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+ 
         .delete-btn {
             background: transparent;
             border: 1px solid #666;
@@ -363,10 +320,8 @@
             transition: background 0.2s, color 0.2s;
         }
         .delete-btn:hover { background: #b71c1c; color: white; border-color: #b71c1c; }
-
-        /* ══════════════════════════════
-           VERLAUF
-        ══════════════════════════════ */
+ 
+        /* ── VERLAUF ── */
         .history-list { list-style: none; padding: 0; margin: 0; }
         .history-item {
             padding: 9px 0;
@@ -377,12 +332,9 @@
             align-items: center;
         }
         .history-item:last-child { border-bottom: none; }
-
-        /* ══════════════════════════════
-           STATUSMELDUNG
-        ══════════════════════════════ */
+ 
+        /* ── STATUS ── */
         .msg-box {
-            font-family: var(--font-display);
             padding: 10px 14px;
             border-radius: 6px;
             margin-bottom: 4px;
@@ -394,182 +346,402 @@
             text-transform: uppercase;
             font-size: 0.9rem;
         }
-
+ 
         .hidden { display: none !important; }
-
         hr { border: 0; border-top: 1px solid var(--border-color); margin: 12px 0; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>ICE Spotter</h1>
-        <div class="header-subtitle">Taufnamen-Sammler · Deutsche Bahn</div>
-        <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
-        <div class="stats" id="stats-counter">Bereit</div>
-        <div class="header-progress-bar">
-            <div class="header-progress-fill" id="progress-fill"></div>
+ 
+<header>
+    <h1>ICE Spotter</h1>
+    <div class="header-subtitle">Taufnamen-Sammler · Deutsche Bahn</div>
+    <button class="settings-btn" id="settings-toggle-btn">⚙️</button>
+    <div class="stats" id="stats-counter">Bereit</div>
+    <div class="header-progress-bar">
+        <div class="header-progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="countdown-grid">
+        <div class="countdown-item">
+            <div class="countdown-number" id="count-spotted">0</div>
+            <div class="countdown-label">Gesehen</div>
         </div>
-        <div class="countdown-grid">
-            <div class="countdown-item">
-                <div class="countdown-number" id="count-spotted">0</div>
-                <div class="countdown-label">Gesehen</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="count-missing">0</div>
-                <div class="countdown-label">Noch offen</div>
-            </div>
+        <div class="countdown-item">
+            <div class="countdown-number" id="count-missing">0</div>
+            <div class="countdown-label">Noch offen</div>
         </div>
-    </header>
-
-    <div class="main-content">
-
-        <div id="settings-area" class="section-box settings-box">
-            <h2>Optionen &amp; Daten</h2>
-            <hr>
-
-            <div class="setting-row-inline">
-                <label for="theme-select">Farbschema:</label>
-                <select id="theme-select" onchange="changeTheme(this.value)">
-                    <option value="dark">Dark Mode</option>
-                    <option value="light">Light Mode</option>
-                </select>
-            </div>
-
-            <div class="setting-row-inline">
-                <label for="color-select">Akzentfarbe:</label>
-                <select id="color-select" onchange="changeAccentColor(this.value)">
-                    <option value="#ea1c24" data-key="dbrot">DB Rot</option>
-                    <option value="#222d5a" data-key="bahnhofsblau">Bahnhofsblau</option>
-                    <option value="#587f40" data-key="sbahn">S-Bahn-Grün</option>
-                    <option value="#903373" data-key="ersatz">Ersatzverkehrlila</option>
-                </select>
-            </div>
-
-            <div class="setting-row-inline">
-                <label for="toggle-tz">Tz-Nummer anzeigen:</label>
-                <input type="checkbox" id="toggle-tz" checked onchange="toggleTzDisplay(this.checked)" style="flex-grow:0;">
-            </div>
-
-            <div class="setting-row-inline">
-                <label for="toggle-history">Sichtungsverlauf anzeigen:</label>
-                <input type="checkbox" id="toggle-history" checked onchange="toggleHistoryDisplay(this.checked)" style="flex-grow:0;">
-            </div>
-
-            <h3>Züge-Datenbank verwalten</h3>
-            <div style="margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px;">
-                <button class="btn btn-secondary" onclick="downloadDatabaseFromServer()">Datenbank online aktualisieren</button>
-            </div>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Manuelle Textdatei importieren (Fallback):</p>
-            <input type="file" id="tx-file-input" accept=".txt" onchange="loadTxtFile(this)" style="width:100%; margin-bottom:15px;">
-
-            <h3>Sichtungsdaten verwalten</h3>
-            <div style="margin-bottom: 15px;">
-                <button class="btn btn-small btn-danger" onclick="clearSightingData()">Sichtungen zurücksetzen</button>
-            </div>
-
-            <button class="btn btn-secondary" onclick="toggleSettings()">Schließen</button>
+    </div>
+</header>
+ 
+<div class="main-content">
+ 
+    <div id="settings-area" class="section-box settings-box">
+        <h2>Optionen &amp; Daten</h2>
+        <hr>
+ 
+        <div class="setting-row-inline">
+            <label for="theme-select">Farbschema:</label>
+            <select id="theme-select" onchange="changeTheme(this.value)">
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+            </select>
         </div>
-
-        <div class="controls">
-            <div id="message" class="msg-box"></div>
-            <div class="input-group">
-                <input type="text" id="spot-input" placeholder="Zugname oder Tz-Nummer..." oninput="showSuggestions(this.value)">
-                <button class="btn" onclick="submitSighting()">Sichten!</button>
-            </div>
-            <div id="suggestions-box" class="suggestions"></div>
+ 
+        <div class="setting-row-inline">
+            <label for="color-select">Akzentfarbe:</label>
+            <select id="color-select" onchange="changeAccentColor(this.value)">
+                <option value="#ea1c24">DB Rot</option>
+                <option value="#222d5a">Bahnhofsblau</option>
+                <option value="#587f40">S-Bahn-Grün</option>
+                <option value="#903373">Ersatzverkehrlila</option>
+            </select>
         </div>
-
-        <details id="details-missing" open>
-            <summary>Noch offen (<span id="title-count-missing">0</span>)</summary>
-            <div class="accordion-content" id="missing-container"></div>
-        </details>
-
-        <details id="details-spotted">
-            <summary>Gesehen &amp; Gesammelt (<span id="title-count-spotted">0</span>)</summary>
-            <div class="accordion-content" id="spotted-container"></div>
-        </details>
-
-        <div class="section-box" id="history-section">
-            <h2>Verlauf der Sichtungen</h2>
-            <ul class="history-list" id="history-container">
-                <li style="color: #888; font-style: italic;">Noch keine Züge gesichtet.</li>
-            </ul>
+ 
+        <div class="setting-row-inline">
+            <label for="toggle-tz">Tz-Nummer anzeigen:</label>
+            <input type="checkbox" id="toggle-tz" checked onchange="toggleTzDisplay(this.checked)" style="flex-grow:0; width:auto;">
         </div>
-
-    </div><!-- /main-content -->
-
-    <script>
-        let trains = [];
-        let spottedTrains = {};
-        let doppelteNamen = new Set();
-        let appConfig = { theme: "dark", accent: "#ea1c24", accentKey: "dbrot", showTz: true, showHistory: true };
-
-        // Accent-Key-Map
-        const accentKeyMap = {
-            "#ea1c24": "dbrot",
-            "#222d5a": "bahnhofsblau",
-            "#587f40": "sbahn",
-            "#903373": "ersatz"
-        };
-
-        try {
-            const savedSpotted = localStorage.getItem('spottedICE_v5');
-            if (savedSpotted) spottedTrains = JSON.parse(savedSpotted);
-        } catch(e) { spottedTrains = {}; }
-
-        try {
-            const savedTrains = localStorage.getItem('trainsCache_v5');
-            if (savedTrains) trains = JSON.parse(savedTrains);
-        } catch(e) { trains = []; }
-
-        try {
-            const savedConfig = localStorage.getItem('iceAppConfig_v5');
-            if (savedConfig) appConfig = { ...appConfig, ...JSON.parse(savedConfig) };
-        } catch(e) {}
-
-        function parseAndSaveText(text) {
-            let parsed = [];
-            const lines = text.split('\n');
-            lines.forEach(line => {
-                const parts = line.split(';');
-                if (parts.length >= 4) {
-                    parsed.push({
-                        id: parts[0].trim(),
-                        number: parts[1].trim(),
-                        name: parts[2].trim(),
-                        type: parts[3].trim()
-                    });
-                }
-            });
-            if (parsed.length > 0) {
-                trains = parsed;
-                try { localStorage.setItem('trainsCache_v5', JSON.stringify(trains)); } catch(err) {}
-                return true;
+ 
+        <div class="setting-row-inline">
+            <label for="toggle-history">Sichtungsverlauf anzeigen:</label>
+            <input type="checkbox" id="toggle-history" checked onchange="toggleHistoryDisplay(this.checked)" style="flex-grow:0; width:auto;">
+        </div>
+ 
+        <h3>Züge-Datenbank verwalten</h3>
+        <div style="margin-bottom:15px; display:flex; flex-direction:column; gap:8px;">
+            <button class="btn btn-secondary" onclick="downloadDatabaseFromServer()">Datenbank online aktualisieren</button>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Manuelle Textdatei importieren (Fallback):</p>
+        <input type="file" id="tx-file-input" accept=".txt" onchange="loadTxtFile(this)" style="width:100%; margin-bottom:15px;">
+ 
+        <h3>Sichtungsdaten verwalten</h3>
+        <div style="margin-bottom:15px;">
+            <button class="btn btn-small btn-danger" onclick="clearSightingData()">Sichtungen zurücksetzen</button>
+        </div>
+ 
+        <button class="btn btn-secondary" onclick="closeSettings()">Schließen</button>
+    </div>
+ 
+    <div class="controls">
+        <div id="message" class="msg-box"></div>
+        <div class="input-group">
+            <input type="text" id="spot-input" placeholder="Zugname oder Tz-Nummer..." oninput="showSuggestions(this.value)">
+            <button class="btn" onclick="submitSighting()">Sichten!</button>
+        </div>
+        <div id="suggestions-box" class="suggestions"></div>
+    </div>
+ 
+    <details id="details-missing" open>
+        <summary>Noch offen (<span id="title-count-missing">0</span>)</summary>
+        <div class="accordion-content" id="missing-container"></div>
+    </details>
+ 
+    <details id="details-spotted">
+        <summary>Gesehen &amp; Gesammelt (<span id="title-count-spotted">0</span>)</summary>
+        <div class="accordion-content" id="spotted-container"></div>
+    </details>
+ 
+    <div class="section-box" id="history-section">
+        <h2>Verlauf der Sichtungen</h2>
+        <ul class="history-list" id="history-container">
+            <li style="color:#888; font-style:italic;">Noch keine Züge gesichtet.</li>
+        </ul>
+    </div>
+ 
+</div>
+ 
+<script>
+    let trains = [];
+    let spottedTrains = {};
+    let doppelteNamen = new Set();
+    let settingsOpen = false;
+    let appConfig = { theme: "dark", accent: "#ea1c24", showTz: true, showHistory: true };
+ 
+    const accentKeyMap = {
+        "#ea1c24": "dbrot",
+        "#222d5a": "bahnhofsblau",
+        "#587f40": "sbahn",
+        "#903373": "ersatz"
+    };
+ 
+    // ── Daten laden ──
+    try { const s = localStorage.getItem('spottedICE_v5'); if (s) spottedTrains = JSON.parse(s); } catch(e) {}
+    try { const s = localStorage.getItem('trainsCache_v5'); if (s) trains = JSON.parse(s); } catch(e) {}
+    try { const s = localStorage.getItem('iceAppConfig_v5'); if (s) appConfig = { ...appConfig, ...JSON.parse(s) }; } catch(e) {}
+ 
+    // ── Settings-Button (Event statt inline onclick) ──
+    document.getElementById('settings-toggle-btn').addEventListener('click', function() {
+        settingsOpen ? closeSettings() : openSettings();
+    });
+ 
+    function openSettings() {
+        settingsOpen = true;
+        document.getElementById('settings-area').style.display = 'block';
+    }
+    function closeSettings() {
+        settingsOpen = false;
+        document.getElementById('settings-area').style.display = 'none';
+    }
+ 
+    // ── Datenbank ──
+    function parseAndSaveText(text) {
+        const parsed = [];
+        text.split('\n').forEach(line => {
+            const parts = line.split(';');
+            if (parts.length >= 4) {
+                parsed.push({
+                    id: parts[0].trim(),
+                    number: parts[1].trim(),
+                    name: parts[2].trim(),
+                    type: parts[3].trim()
+                });
             }
-            return false;
+        });
+        if (parsed.length > 0) {
+            trains = parsed;
+            try { localStorage.setItem('trainsCache_v5', JSON.stringify(trains)); } catch(e) {}
+            return true;
         }
-
-        function downloadDatabaseFromServer() {
-            const url = "https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/92f57a9445b118362fcdd9f50d443cd371d5347c/gistfile1.txt";
-            showStatusMessage("Lade Datenbank...", "#ff9800");
-            fetch(url)
-                .then(response => { if (!response.ok) throw new Error("Netzwerkfehler"); return response.text(); })
-                .then(text => {
-                    if (parseAndSaveText(text)) {
-                        showStatusMessage("Datenbank erfolgreich geladen!", "#4caf50");
-                        initApp();
-                    } else {
-                        showStatusMessage("Falsches Textformat empfangen!", "#db4437");
-                    }
-                })
-                .catch(() => showStatusMessage("Download fehlgeschlagen!", "#db4437"));
+        return false;
+    }
+ 
+    function downloadDatabaseFromServer() {
+        // Immer-aktuell URL (ohne festen Commit-Hash)
+        const url = "https://gist.githubusercontent.com/akke946/cd5e2a6675157254b2cabbfae148ea2a/raw/3e2918e99f053b487adb25253897260390e15c9a/gistfile1.txt";
+        showStatusMessage("Lade Datenbank...", "#ff9800");
+        fetch(url)
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+            .then(text => {
+                if (parseAndSaveText(text)) {
+                    showStatusMessage("Datenbank geladen!", "#4caf50");
+                    initApp();
+                } else {
+                    showStatusMessage("Falsches Format!", "#db4437");
+                }
+            })
+            .catch(err => {
+                console.error("DB-Download Fehler:", err);
+                showStatusMessage("Download fehlgeschlagen!", "#db4437");
+            });
+    }
+ 
+    function loadTxtFile(input) {
+        const file = input.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = e => {
+            if (parseAndSaveText(e.target.result)) {
+                showStatusMessage("Datenbank lokal geladen!", "#4caf50");
+                closeSettings();
+                initApp();
+            } else {
+                showStatusMessage("Falsches Format!", "#db4437");
+            }
+        };
+        reader.readAsText(file);
+    }
+ 
+    function checkFirstStart() {
+        if (trains.length === 0) downloadDatabaseFromServer();
+    }
+ 
+    // ── Config ──
+    function applyFont(key) {
+        if (key === 'bahnhofsblau') {
+            document.body.classList.add('font-bahnhofsblau');
+        } else {
+            document.body.classList.remove('font-bahnhofsblau');
         }
-
-        function loadTxtFile(input) {
-            const file = input.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                if (parseAndSaveText(e.target.result)) {
-                    showStatusMessage("Datenbank lokal geladen!", "#4
+    }
+ 
+    function applyConfig() {
+        document.documentElement.setAttribute('data-theme', appConfig.theme || 'dark');
+        document.getElementById('theme-select').value = appConfig.theme || 'dark';
+ 
+        const accent = appConfig.accent || '#ea1c24';
+        document.documentElement.style.setProperty('--accent-color', accent);
+        document.getElementById('color-select').value = accent;
+ 
+        applyFont(accentKeyMap[accent] || 'dbrot');
+ 
+        document.getElementById('toggle-tz').checked = appConfig.showTz !== false;
+        document.getElementById('toggle-history').checked = appConfig.showHistory !== false;
+        toggleHistoryDisplay(appConfig.showHistory !== false);
+    }
+ 
+    function saveConfig() {
+        try { localStorage.setItem('iceAppConfig_v5', JSON.stringify(appConfig)); } catch(e) {}
+    }
+ 
+    function changeTheme(theme) {
+        appConfig.theme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        saveConfig();
+    }
+ 
+    function changeAccentColor(color) {
+        appConfig.accent = color;
+        document.documentElement.style.setProperty('--accent-color', color);
+        applyFont(accentKeyMap[color] || 'dbrot');
+        saveConfig();
+    }
+ 
+    function toggleTzDisplay(checked) {
+        appConfig.showTz = checked;
+        saveConfig();
+        renderLists();
+    }
+ 
+    function toggleHistoryDisplay(checked) {
+        appConfig.showHistory = checked;
+        saveConfig();
+        const section = document.getElementById('history-section');
+        if (section) section.classList.toggle('hidden', !checked);
+    }
+ 
+    function clearSightingData() {
+        if (confirm("Alle Sichtungen löschen?")) {
+            spottedTrains = {};
+            try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
+            initApp();
+        }
+    }
+ 
+    // ── App ──
+    function ermittleDoppelteNamen() {
+        doppelteNamen.clear();
+        const gesehen = new Set();
+        trains.forEach(t => {
+            if (!t?.name) return;
+            const k = t.name.toLowerCase();
+            if (gesehen.has(k)) doppelteNamen.add(k);
+            gesehen.add(k);
+        });
+    }
+ 
+    function initApp() {
+        ermittleDoppelteNamen();
+        applyConfig();
+        renderLists();
+        renderStats();
+    }
+ 
+    // ── Suche ──
+    function showSuggestions(val) {
+        const box = document.getElementById('suggestions-box');
+        if (!trains.length || !val || val.length < 2) { box.style.display = 'none'; return; }
+        const search = val.toLowerCase();
+        const filtered = trains.filter(t =>
+            !spottedTrains[t.id] &&
+            (t.name.toLowerCase().includes(search) || t.number.toLowerCase().includes(search))
+        );
+        if (!filtered.length) { box.style.display = 'none'; return; }
+        box.innerHTML = "";
+        box.style.display = 'block';
+        filtered.slice(0, 5).forEach(train => {
+            const doppelt = doppelteNamen.has(train.name.toLowerCase());
+            const div = document.createElement('div');
+            div.className = "suggestion-item";
+            div.innerText = doppelt ? `${train.name} (${train.type})` : train.name;
+            div.onclick = () => {
+                document.getElementById('spot-input').value = train.number;
+                box.style.display = 'none';
+            };
+            box.appendChild(div);
+        });
+    }
+ 
+    function submitSighting() {
+        if (!trains.length) return;
+        const inputEl = document.getElementById('spot-input');
+        const val = inputEl.value.trim().toLowerCase();
+        if (!val) return;
+        const found = trains.find(t => t.number.toLowerCase() === val || t.name.toLowerCase() === val);
+        if (found) {
+            if (spottedTrains[found.id]) {
+                showStatusMessage("Schon gesammelt!", "#ff9800");
+            } else {
+                spottedTrains[found.id] = new Date().toLocaleString('de-DE');
+                try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
+                showStatusMessage("Gesichtet! 🚄", "#4caf50");
+                inputEl.value = "";
+                document.getElementById('suggestions-box').style.display = 'none';
+                initApp();
+            }
+        } else {
+            showStatusMessage("Nicht gefunden!", "#db4437");
+        }
+    }
+ 
+    function showStatusMessage(text, bgColor) {
+        const el = document.getElementById('message');
+        el.innerText = text;
+        el.style.backgroundColor = bgColor;
+        el.style.display = 'block';
+        setTimeout(() => { el.style.display = 'none'; }, 3000);
+    }
+ 
+    function removeSighting(id) {
+        delete spottedTrains[id];
+        try { localStorage.setItem('spottedICE_v5', JSON.stringify(spottedTrains)); } catch(e) {}
+        initApp();
+    }
+ 
+    // ── Render ──
+    function renderStats() {
+        if (!trains.length) return;
+        const spottedCount = trains.filter(t => spottedTrains[t.id]).length;
+        const missingCount = trains.length - spottedCount;
+        const percent = Math.round((spottedCount / trains.length) * 100) || 0;
+ 
+        document.getElementById('stats-counter').innerText = `Gesamtfortschritt: ${percent}%`;
+        document.getElementById('progress-fill').style.width = percent + '%';
+        document.getElementById('count-spotted').innerText = spottedCount;
+        document.getElementById('count-missing').innerText = missingCount;
+        document.getElementById('title-count-missing').innerText = missingCount;
+        document.getElementById('title-count-spotted').innerText = spottedCount;
+ 
+        const historyContainer = document.getElementById('history-container');
+        historyContainer.innerHTML = "";
+        const historyArray = trains
+            .filter(t => spottedTrains[t.id])
+            .map(t => ({ ...t, spottedAt: spottedTrains[t.id] }))
+            .reverse();
+ 
+        if (!historyArray.length) {
+            historyContainer.innerHTML = `<li style="color:#888; font-style:italic;">Noch keine Züge gesichtet.</li>`;
+            return;
+        }
+        historyArray.forEach(train => {
+            const li = document.createElement('li');
+            li.className = "history-item";
+            const tz = appConfig.showTz ? ` (${train.number})` : '';
+            li.innerHTML = `<span><strong>${train.name}</strong>${tz}</span><span style="color:var(--text-muted); font-size:0.82rem;">${train.spottedAt}</span>`;
+            historyContainer.appendChild(li);
+        });
+    }
+ 
+    function renderLists() {
+        const mc = document.getElementById('missing-container');
+        const sc = document.getElementById('spotted-container');
+        mc.innerHTML = ""; sc.innerHTML = "";
+        trains.forEach(train => {
+            const spotted = !!spottedTrains[train.id];
+            const card = document.createElement('div');
+            card.className = `train-card${spotted ? ' spotted' : ''}`;
+            const tz = appConfig.showTz ? ` · Tz ${train.number}` : '';
+            if (spotted) {
+                card.innerHTML = `<div class="train-info"><div class="train-name">${train.name}</div><div class="train-meta">${train.type}${tz}</div></div><button class="delete-btn" onclick="removeSighting('${train.id}')">✕</button>`;
+                sc.appendChild(card);
+            } else {
+                card.innerHTML = `<div class="train-info"><div class="train-name">${train.name}</div><div class="train-meta">${train.type}${tz}</div></div>`;
+                mc.appendChild(card);
+            }
+        });
+    }
+ 
+    initApp();
+    checkFirstStart();
+</script>
+</body>
+</html>

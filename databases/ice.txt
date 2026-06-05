@@ -1,0 +1,601 @@
+101_Giessen;Tz 101;Gießen;ICE 1
+102_Jena;Tz 102;Jena;ICE 1
+103_Neu-Isenburg;Tz 103;Neu-Isenburg;ICE 1
+104_Muehlheim;Tz 104;Mühlheim am Main;ICE 1
+105_Offenbach;Tz 105;Offenbach am Main;ICE 1
+106_Itzehoe;Tz 106;Itzehoe;ICE 1
+107_Plattling;Tz 107;Plattling;ICE 1
+108_Lichtenfels;Tz 108;Lichtenfels;ICE 1
+109_Aschaffenburg;Tz 109;Aschaffenburg;ICE 1
+110_Gelsenkirchen;Tz 110;Gelsenkirchen;ICE 1
+111_Nuernberg;Tz 111;Nürnberg;ICE 1
+112_Memmingen;Tz 112;Memmingen;ICE 1
+113_Frankenthal;Tz 113;Frankenthal (Pfalz);ICE 1
+114_Friedrichshafen;Tz 114;Friedrichshafen;ICE 1
+115_Regensburg;Tz 115;Regensburg;ICE 1
+116_Pforzheim;Tz 116;Pforzheim;ICE 1
+117_Hof;Tz 117;Hof;ICE 1
+118_Saarbruecken;Tz 118;Saarbrücken;ICE 1
+119_Osnabrueck;Tz 119;Osnabrück;ICE 1
+120_Braunschweig;Tz 120;Braunschweig;ICE 1
+121_Suhl;Tz 121;Suhl;ICE 1
+122_Chur;Tz 122;Chur;ICE 1;OUS
+123_Kassel;Tz 123;Kassel;ICE 1
+124_Hanau;Tz 124;Hanau;ICE 1
+130_Verden;Tz 130;Verden (Aller);ICE 1
+131_Gelnhausen;Tz 131;Gelnhausen;ICE 1
+132_Bebra;Tz 132;Bebra;ICE 1
+133_Crailsheim;Tz 133;Crailsheim;ICE 1
+134_Mittenwald;Tz 134;Mittenwald;ICE 1
+135_Worms;Tz 135;Worms;ICE 1
+136_MaxLiebermann;Tz 136;Max Liebermann;ICE 1;OUS
+137_Heilbronn;Tz 137;Heilbronn;ICE 1
+138_LandkreisAschaffenburg;Tz 138;Landkreis Aschaffenburg;ICE 1
+139_Weimar;Tz 139;Weimar;ICE 1
+140_Pirmasens;Tz 140;Pirmasens;ICE 1
+141_Altona;Tz 141;Hamburg-Altona;ICE 1
+142_Harburg;Tz 142;Hamburg-Harburg;ICE 1
+143_Rendsburg;Tz 143;Rendsburg;ICE 1
+144_Bremerhaven;Tz 144;Bremerhaven;ICE 1
+145_Bergedorf;Tz 145;Hamburg-Bergedorf;ICE 1
+146_Interlaken;Tz 146;Interlaken;ICE 1
+147_Zuerich;Tz 147;Zürich;ICE 1
+148_InselRuegen;Tz 148;Insel Rügen;ICE 1
+149_Bruchsal;Tz 149;Bruchsal;ICE 1
+150_Wandsbek;Tz 150;Hamburg-Wandsbek;ICE 1
+152_Hanau;Tz 152;Hanau;ICE 1
+153_Neumuenster;Tz 153;Neumünster;ICE 1
+154_Flensburg;Tz 154;Flensburg;ICE 1
+155_Rosenheim;Tz 155;Rosenheim;ICE 1
+156_Heide;Tz 156;Heide (Holstein);ICE 1
+157_Landshut;Tz 157;Landshut;ICE 1
+158_Garmisch;Tz 158;Garmisch-Partenkirchen;ICE 1
+159_BadOldesloe;Tz 159;Bad Oldesloe;ICE 1
+160_MuelheimRuhr;Tz 160;Mülheim an der Ruhr;ICE 1
+161_Bebra;Tz 161;Bebra;ICE 1
+162_Geislingen;Tz 162;Geislingen an der Steige;ICE 1
+163_Sigmaringen;Tz 163;Sigmaringen;ICE 1
+164_Rottweil;Tz 164;Rottweil;ICE 1
+165_Horb;Tz 165;Horb am Neckar;ICE 1
+166_Gelnhausen;Tz 166;Gelnhausen;ICE 1
+167_Mittenwald;Tz 167;Mittenwald;ICE 1
+168_Crailsheim;Tz 168;Crailsheim;ICE 1
+169_Worms;Tz 169;Worms;ICE 1
+170_Donauwoerth;Tz 170;Donauwörth;ICE 1
+171_Heilbronn;Tz 171;Heilbronn;ICE 1
+172_Aschaffenburg2;Tz 172;Landkreis Aschaffenburg;ICE 1
+173_Weimar;Tz 173;Weimar;ICE 1
+174_Pirmasens;Tz 174;Pirmasens;ICE 1
+175_Niederalteich;Tz 175;Niederalteich;ICE 1
+176_Remagen;Tz 176;Remagen;ICE 1
+177_Rendsburg;Tz 177;Rendsburg;ICE 1
+178_Bremerhaven;Tz 178;Bremerhaven;ICE 1
+179_BadBreisig;Tz 179;Bad Breisig;ICE 1
+180_CastropRauxel;Tz 180;Castrop-Rauxel;ICE 1
+181_Interlaken;Tz 181;Interlaken;ICE 1
+182_Zuerich;Tz 182;Zürich;ICE 1
+183_Ruegen;Tz 183;Insel Rügen;ICE 1
+184_Bruchsal;Tz 184;Bruchsal;ICE 1
+185_Freilassing;Tz 185;Freilassing;ICE 1
+186_Chur;Tz 186;Chur;ICE 1
+187_MuelheimRuhr;Tz 187;Mülheim an der Ruhr;ICE 1
+188_Riesa;Tz 188;Riesa;ICE 1
+189_Meiningen;Tz 189;Meiningen;ICE 1
+190_Ludwigshafen;Tz 190;Ludwigshafen am Rhein;ICE 1
+201_Rheinsberg;Tz 201;Rheinsberg;ICE 2
+202_Wuppertal;Tz 202;Wuppertal;ICE 2
+203_Cottbus;Tz 203;Cottbus;ICE 2
+204_Bielefeld;Tz 204;Bielefeld;ICE 2
+205_Zwickau;Tz 205;Zwickau;ICE 2
+206_Magdeburg;Tz 206;Magdeburg;ICE 2
+207_Stendal;Tz 207;Stendal;ICE 2
+208_Bonn2;Tz 208;Bonn;ICE 2
+209_Riesa;Tz 209;Riesa;ICE 2
+210_Gnoenien;Tz 210;Gnoien;ICE 2
+211_Uelzen;Tz 211;Uelzen;ICE 2
+212_Potsdam;Tz 212;Potsdam;ICE 2
+213_Nauen;Tz 213;Nauen;ICE 2
+214_Hamm;Tz 214;Hamm (Westf);ICE 2
+215_Bitterfeld;Tz 215;Bitterfeld-Wolfen;ICE 2
+216_Dessau;Tz 216;Dessau-Roßlau;ICE 2
+217_Bergen;Tz 217;Bergen auf Rügen;ICE 2
+218_Braunsbedra;Tz 218;Braunsbedra;ICE 2
+219_Hagen;Tz 219;Hagen;ICE 2
+220_Meiningen;Tz 220;Meiningen;ICE 2
+221_Luebbenau;Tz 221;Lübbenau/Spreewald;ICE 2
+222_Eberswalde;Tz 222;Eberswalde;ICE 2
+223_Schwerin;Tz 223;Schwerin;ICE 2
+224_Saalfeld;Tz 224;Saalfeld/Saale;ICE 2
+225_Suhl2;Tz 225;Suhl;ICE 2
+226_Altenburg2;Tz 226;Altenburg;ICE 2
+227_Wittenberg2;Tz 227;Lutherstadt Wittenberg;ICE 2
+228_Bitterfeld2;Tz 228;Bitterfeld-Wolfen;ICE 2
+230_Delmenhorst;Tz 230;Delmenhorst;ICE 2
+231_Magdeburg2;Tz 231;Magdeburg;ICE 2
+232_FrankfurtOder;Tz 232;Frankfurt (Oder);ICE 2
+233_Ulm;Tz 233;Ulm;ICE 2
+234_Minden;Tz 234;Minden;ICE 2
+235_Goettingen;Tz 235;Göttingen;ICE 2
+236_Buna;Tz 236;Schkopau;ICE 2
+237_Anklam;Tz 237;Anklam;ICE 2
+238_Zeven;Tz 238;Zeven;ICE 2
+239_Essen;Tz 239;Essen;ICE 2
+240_Boeblingen;Tz 240;Böblingen;ICE 2
+241_BadHersfeld;Tz 241;Bad Hersfeld;ICE 2
+242_Quedlinburg;Tz 242;Quedlinburg;ICE 2
+243_Ludwigshafen;Tz 243;Ludwigshafen am Rhein;ICE 2
+244_Bochum;Tz 244;Bochum;ICE 2
+245_Gelsenkirchen2;Tz 245;Gelsenkirchen;ICE 2
+246_Erfurt2;Tz 246;Erfurt;ICE 2
+247_Gera2;Tz 247;Gera;ICE 2
+248_Leipzig2;Tz 248;Leipzig;ICE 2
+249_Dresden2;Tz 249;Dresden;ICE 2
+250_Chemnitz2;Tz 250;Chemnitz;ICE 2
+301_Freiburg;Tz 301;Freiburg im Breisgau;ICE 3
+302_Luebeck;Tz 302;Lübeck;ICE 3
+303_Dortmund;Tz 303;Dortmund;ICE 3
+304_Muenster;Tz 304;Münster (Westf);ICE 3
+305_Baden;Tz 305;Baden-Baden;ICE 3
+306_Kaiserslautern;Tz 306;Kaiserslautern;ICE 3
+307_Oberhausen;Tz 307;Oberhausen;ICE 3
+308_Muelheim2;Tz 308;Mülheim an der Ruhr;ICE 3
+309_Saarbruecken3;Tz 309;Saarbrücken;ICE 3
+310_Wolfsburg;Tz 310;Wolfsburg;ICE 3
+311_Wiesbaden;Tz 311;Wiesbaden;ICE 3
+312_Montabaur;Tz 312;Montabaur;ICE 3
+313_Treuchtlingen;Tz 313;Treuchtlingen;ICE 3
+314_Simbach;Tz 314;Simbach am Inn;ICE 3
+315_Singen;Tz 315;Singen (Hohentwiel);ICE 3
+316_Siegburg;Tz 316;Siegburg;ICE 3
+317_Recklinghausen;Tz 317;Recklinghausen;ICE 3
+318_Muenster3;Tz 318;Münster (Westf);ICE 3
+319_Erkrath;Tz 319;Erkrath;ICE 3
+320_WeilamRhein;Tz 320;Weil am Rhein;ICE 3
+321_Krefeld;Tz 321;Krefeld;ICE 3;OUS
+322_Hamm;Tz 322;Hamm (Westf);ICE 3
+323_Schaffhausen;Tz 323;Schaffhausen;ICE 3;OUS
+324_Fuerth;Tz 324;Fürth;ICE 3
+325_Ravensburg;Tz 325;Ravensburg;ICE 3
+326_Minden3;Tz 326;Minden;ICE 3
+327_Siegen;Tz 327;Siegen;ICE 3
+328_Aachen;Tz 328;Aachen;ICE 3
+329_Koeln3;Tz 329;Köln;ICE 3
+330_Goettingen3;Tz 330;Göttingen;ICE 3
+331_Westerland;Tz 331;Westerland/Sylt;ICE 3
+332_Augsburg;Tz 332;Augsburg;ICE 3
+333_Goslar;Tz 333;Goslar;ICE 3
+334_Offenburg;Tz 334;Offenburg;ICE 3
+335_Karlsruhe;Tz 335;Karlsruhe;ICE 3
+336_Ingolstadt;Tz 336;Ingolstadt;ICE 3
+337_Stuttgart;Tz 337;Stuttgart;ICE 3
+338_BadenBaden3;Tz 338;Baden-Baden;ICE 3
+339_Kaiserslautern3;Tz 339;Kaiserslautern;ICE 3
+340_Oberhausen3;Tz 340;Oberhausen;ICE 3
+341_Siegburg3;Tz 341;Siegburg;ICE 3
+342_Recklinghausen3;Tz 342;Recklinghausen;ICE 3
+343_Erkrath3;Tz 343;Erkrath;ICE 3
+344_WeilamRhein3;Tz 344;Weil am Rhein;ICE 3
+345_Krefeld3;Tz 345;Krefeld;ICE 3
+346_Schaffhausen3;Tz 346;Schaffhausen;ICE 3
+347_Fuerth3;Tz 347;Fürth;ICE 3
+348_Ravensburg3;Tz 348;Ravensburg;ICE 3
+349_Siegen3;Tz 349;Siegen;ICE 3
+350_Aachen3;Tz 350;Aachen;ICE 3
+351_Herford;Tz 351;Herford;ICE 3
+352_Moenchengladbach;Tz 352;Mönchengladbach;ICE 3
+353_NeuIsenburg;Tz 353;Neu-Isenburg;ICE 3
+354_Mittenwald3;Tz 354;Mittenwald;ICE 3
+355_Tuttlingen;Tz 355;Tuttlingen;ICE 3
+356_Naila;Tz 356;Naila;ICE 3
+356_Naila3;Tz 356;Naila;ICE 3
+357_Esslingen;Tz 357;Esslingen am Neckar;ICE 3
+358_StIngbert;Tz 358;St. Ingbert;ICE 3
+359_Neuss;Tz 359;Neuss;ICE 3
+360_Linz;Tz 360;Linz;ICE 3
+361_Celle;Tz 361;Celle;ICE 3
+362_Schwerin3;Tz 362;Schwerin;ICE 3
+363_Basel;Tz 363;Basel;ICE 3
+364_Bochum3;Tz 364;Bochum;ICE 3
+365_Essen3;Tz 365;Essen;ICE 3
+366_Duisburg3;Tz 366;Duisburg;ICE 3
+367_Duesseldorf3;Tz 367;Düsseldorf;ICE 3
+368_Mainz3;Tz 368;Mainz;ICE 3
+369_Worms3;Tz 369;Worms;ICE 3
+370_Heilbronn3;Tz 370;Heilbronn;ICE 3
+371_Pforzheim3;Tz 371;Pforzheim;ICE 3
+372_Karlsruhe3;Tz 372;Karlsruhe;ICE 3
+373_Mannheim3;Tz 373;Mannheim;ICE 3
+374_Heidelberg3;Tz 374;Heidelberg;ICE 3
+375_Stuttgart3;Tz 375;Stuttgart;ICE 3
+376_Ulm3;Tz 376;Ulm;ICE 3
+377_Augsburg3;Tz 377;Augsburg;ICE 3
+378_Muenchen3;Tz 378;München;ICE 3
+379_Nürnberg3;Tz 379;Nürnberg;ICE 3
+380_Ingolstadt3;Tz 380;Ingolstadt;ICE 3
+381_Regensburg3;Tz 381;Regensburg;ICE 3
+382_Passau3;Tz 382;Passau;ICE 3
+383_Wuerzburg3;Tz 383;Würzburg;ICE 3
+384_Aschaffenburg3;Tz 384;Aschaffenburg;ICE 3
+385_Hanau3;Tz 385;Hanau;ICE 3
+386_Frankfurt3;Tz 386;Frankfurt am Main;ICE 3
+387_Fulda3;Tz 387;Fulda;ICE 3
+388_Kassel3;Tz 388;Kassel;ICE 3
+389_Goettingen3b;Tz 389;Göttingen;ICE 3
+390_Hanover3;Tz 390;Hannover;ICE 3
+391_Braunschweig3;Tz 391;Braunschweig;ICE 3
+392_Wolfsburg3;Tz 392;Wolfsburg;ICE 3
+393_Berlin3;Tz 393;Berlin;ICE 3
+394_Potsdam3;Tz 394;Potsdam;ICE 3
+395_Magdeburg3;Tz 395;Magdeburg;ICE 3
+396_Stendal3;Tz 396;Stendal;ICE 3
+397_Bielefeld3;Tz 397;Bielefeld;ICE 3
+398_Hamm3;Tz 398;Hamm (Westf);ICE 3
+399_Dortmund3;Tz 399;Dortmund;ICE 3
+401_Ansbach;Tz 401;Ansbach;ICE 3
+402_Amorbach;Tz 402;Amorbach;ICE 3
+403_Aulendorf;Tz 403;Aulendorf;ICE 3
+404_BadBellingen;Tz 404;Bad Bellingen;ICE 3
+405_BadGodesberg;Tz 405;Bad Godesberg;ICE 3
+406_BadHomburg;Tz 406;Bad Homburg v. d. Höhe;ICE 3
+407_BadMergentheim;Tz 407;Bad Mergentheim;ICE 3
+408_BadOeynhausen;Tz 408;Bad Oeynhausen;ICE 3
+409_BadSaeckingen;Tz 409;Bad Säckingen;ICE 3
+410_BadSalzuflen;Tz 410;Bad Salzuflen;ICE 3
+411_BadPyrmont;Tz 411;Bad Pyrmont;ICE 3
+412_BadReichenhall;Tz 412;Bad Reichenhall;ICE 3
+413_Beckum;Tz 413;Beckum;ICE 3
+414_Bensheim;Tz 414;Bensheim;ICE 3
+415_Bruchsal;Tz 415;Bruchsal;ICE 3
+416_CastropRauxel;Tz 416;Castrop-Rauxel;ICE 3
+417_Crailsheim;Tz 417;Crailsheim;ICE 3
+418_Cuxhaven;Tz 418;Cuxhaven;ICE 3
+419_Deggendorf;Tz 419;Deggendorf;ICE 3
+420_Dinslaken;Tz 420;Dinslaken;ICE 3
+421_Donauwoerth;Tz 421;Donauwörth;ICE 3
+422_Eichstaett;Tz 422;Eichstätt;ICE 3
+423_Elsterwerda;Tz 423;Elsterwerda;ICE 3
+424_Erbach;Tz 424;Erbach (Odenwald);ICE 3
+425_Erlangen;Tz 425;Erlangen;ICE 3
+426_Eschwege;Tz 426;Eschwege;ICE 3
+427_Flensburg;Tz 427;Flensburg;ICE 3
+428_Freilassing;Tz 428;Freilassing;ICE 3
+429_Freising;Tz 429;Freising;ICE 3
+430_Gaggenau;Tz 430;Gaggenau;ICE 3
+431_Geislingen;Tz 431;Geislingen an der Steige;ICE 3
+432_Geldern;Tz 432;Geldern;ICE 3
+433_Gelnhausen;Tz 433;Gelnhausen;ICE 3
+434_Gevelsberg;Tz 434;Gevelsberg;ICE 3
+435_Goch;Tz 435;Goch;ICE 3
+436_Gotha;Tz 436;Gotha;ICE 3
+437_Grevenbroich;Tz 437;Grevenbroich;ICE 3
+438_Gronau;Tz 438;Gronau (Westf.);ICE 3
+439_Guben;Tz 439;Guben;ICE 3
+440_Guenzburg;Tz 440;Günzburg;ICE 3
+441_Heide;Tz 441;Heide (Holstein);ICE 3
+442_Heidenheim;Tz 442;Heidenheim an der Brenz;ICE 3
+443_Heppenheim;Tz 443;Heppenheim (Bergstraße);ICE 3
+444_Herrenberg;Tz 444;Herrenberg;ICE 3
+445_Herten;Tz 445;Herten;ICE 3
+446_Homburg;Tz 446;Homburg (Saar);ICE 3
+447_Horb;Tz 447;Horb am Neckar;ICE 3
+448_Ilmenau;Tz 448;Ilmenau;ICE 3
+449_Jueterbog;Tz 449;Jüterbog;ICE 3
+450_Kehl;Tz 450;Kehl;ICE 3
+451_Kempten;Tz 451;Kempten (Allgäu);ICE 3
+452_Kitzingen;Tz 452;Kitzingen;ICE 3
+453_Kleve;Tz 453;Kleve;ICE 3
+454_Konstanz;Tz 454;Konstanz;ICE 3
+455_Kronach;Tz 455;Kronach;ICE 3
+456_Kulmbach;Tz 456;Kulmbach;ICE 3
+457_Lahr;Tz 457;Lahr/Schwarzwald;ICE 3
+458_Landsberg;Tz 458;Landsberg am Lech;ICE 3
+459_Landshut;Tz 459;Landshut;ICE 3
+460_Leimen;Tz 460;Leimen;ICE 3
+461_Lette;Tz 461;Lette (Coesfeld);ICE 3
+462_Limburg;Tz 462;Limburg an der Lahn;ICE 3
+463_Lippstadt;Tz 463;Lippstadt;ICE 3
+464_Loehne;Tz 464;Löhne (Westf.);ICE 3
+465_Loerrach;Tz 465;Lörrach;ICE 3
+466_Ludwigsburg;Tz 466;Ludwigsburg;ICE 3
+467_Menden;Tz 467;Menden (Sauerland);ICE 3
+468_Mettmann;Tz 468;Mettmann;ICE 3
+469_Metzingen;Tz 469;Metzingen;ICE 3
+470_Minden;Tz 470;Minden;ICE 3
+471_Moers;Tz 471;Moers;ICE 3
+472_Mosbach;Tz 472;Mosbach;ICE 3
+473_Muehldorf;Tz 473;Mühldorf am Inn;ICE 3
+474_Nagold;Tz 474;Nagold;ICE 3
+475_Neckarsulm;Tz 475;Neckarsulm;ICE 3
+476_Neresheim;Tz 476;Neresheim;ICE 3
+477_Neuburg;Tz 477;Neuburg an der Donau;ICE 3
+478_NeuSuckow;Tz 478;Neu Suckow;ICE 3
+479_NeustadtAisch;Tz 479;Neustadt an der Aisch;ICE 3
+480_NeustadtWeinstrasse;Tz 480;Neustadt an der Weinstraße;ICE 3
+481_Nuertingen;Tz 481;Nürtingen;ICE 3
+482_Oberasbach;Tz 482;Oberasbach;ICE 3
+483_Oelde;Tz 483;Oelde;ICE 3
+484_OerErkenschwick;Tz 484;Oer-Erkenschwick;ICE 3
+485_Paderborn;Tz 485;Paderborn;ICE 3
+486_Pankow;Tz 486;Berlin-Pankow;ICE 3
+487_Passau;Tz 487;Passau;ICE 3
+488_Pforzheim;Tz 488;Pforzheim;ICE 3
+489_Plattling;Tz 489;Plattling;ICE 3
+490_Plauen;Tz 490;Plauen;ICE 3
+1101_Muenchen;Tz 1101;München;ICE T
+1102_Leipzig;Tz 1102;Leipzig;ICE T
+1103_Paderborn;Tz 1103;Paderborn;ICE T
+1104_ErfurtT;Tz 1104;Erfurt;ICE T
+1105_Dresden;Tz 1105;Dresden;ICE T
+1106_DusseldorfT;Tz 1106;Düsseldorf;ICE T;OUS
+1107_Berlin;Tz 1107;Berlin;ICE T
+1108_Berlin;Tz 1108;Berlin;ICE T
+1109_Gera;Tz 1109;Gera;ICE T
+1110_Naumburg;Tz 1110;Naumburg (Saale);ICE T
+1111_Konstanz;Tz 1111;Konstanz;ICE T
+1112_Ilmenau;Tz 1112;Ilmenau;ICE T
+1113_Gotha;Tz 1113;Gotha;ICE T
+1114_WuerzburgT;Tz 1114;Würzburg;ICE T
+1115_RegensburgT;Tz 1115;Regensburg;ICE T
+1116_PassauT;Tz 1116;Passau;ICE T
+1117_Erlangen;Tz 1117;Erlangen;ICE T
+1118_Plauen;Tz 1118;Plauen;ICE T
+1119_Meissen;Tz 1119;Meißen;ICE T
+1120_NuernbergT;Tz 1120;Nürnberg;ICE T
+1121_ErlangenT;Tz 1121;Erlangen;ICE T
+1122_BambergT;Tz 1122;Bamberg;ICE T
+1123_CoburgT;Tz 1123;Coburg;ICE T
+1124_SonnebergT;Tz 1124;Sonneberg;ICE T
+1125_Marburg;Tz 1125;Marburg;ICE T
+1126_LinzT;Tz 1126;Linz;ICE T
+1127_Weimar;Tz 1127;Weimar;ICE T
+1128_Reutlingen;Tz 1128;Reutlingen;ICE T
+1129_Kiel;Tz 1129;Kiel;ICE T
+1130_Jena;Tz 1130;Jena;ICE T
+1131_Trier;Tz 1131;Trier;ICE T
+1132_Wittenberg;Tz 1132;Lutherstadt Wittenberg;ICE T
+1133_DessauT;Tz 1133;Dessau-Roßlau;ICE T
+1134_BitterfeldT;Tz 1134;Bitterfeld-Wolfen;ICE T
+1135_LutherstadtWittenbergT;Tz 1135;Lutherstadt Wittenberg;ICE T
+1136_NauenT;Tz 1136;Nauen;ICE T
+1137_StendalT;Tz 1137;Stendal;ICE T
+1138_MagdeburgT;Tz 1138;Magdeburg;ICE T
+1139_BraunschweigT;Tz 1139;Braunschweig;ICE T
+1140_HannoverT;Tz 1140;Hannover;ICE T
+1151_Elsterwerda;Tz 1151;Elsterwerda;ICE T
+1152_Traunstein;Tz 1152;Traunstein;ICE T
+1153_Bamberg;Tz 1153;Bamberg;ICE T
+1154_Sonneberg;Tz 1154;Sonneberg;ICE T
+1155_Muehlhausen;Tz 1155;Mühlhausen (Thüringen);ICE T
+1156_Waren;Tz 1156;Waren (Müritz);ICE T
+1157_Innsbruck;Tz 1157;Innsbruck;ICE T
+1158_Falkenberg;Tz 1158;Falkenberg/Elster;ICE T
+1159_BadGst;Tz 1159;Bad Gastein;ICE T
+1160_Ansbach;Tz 1160;Ansbach;ICE T
+1161_Andernach;Tz 1161;Andernach;ICE T
+1162_Vaihingen;Tz 1162;Vaihingen an der Enz;ICE T
+1163_Bingen;Tz 1163;Bingen am Rhein;ICE T
+1164_Heidenheim;Tz 1164;Heidenheim an der Brenz;ICE T
+1165_BadOeynhausen;Tz 1165;Bad Oeynhausen;ICE T
+1166_Buelach;Tz 1166;Bülach;ICE T
+1167_Traunreut;Tz 1167;Traunreut;ICE T
+1168_Ellwangen;Tz 1168;Ellwangen;ICE T
+1169_Tutzing;Tz 1169;Tutzing;ICE T
+1170_Prenzlau;Tz 1170;Prenzlau;ICE T
+1171_Oschatz;Tz 1171;Oschatz;ICE T
+1172_Aschaffenburg;Tz 1172;Aschaffenburg;ICE T
+1173_Troisdorf;Tz 1173;Troisdorf;ICE T
+1174_Warnemuende;Tz 1174;Warnemünde;ICE T
+1175_VillingenSchwenningen;Tz 1175;Villingen-Schwenningen;ICE T
+1176_Coburg;Tz 1176;Coburg;ICE T
+1177_Rathenow;Tz 1177;Rathenow;ICE T
+1178_OstseebadBinz;Tz 1178;Ostseebad Binz;ICE T
+1179_OstseebadSellin;Tz 1179;Ostseebad Sellin;ICE T
+1180_Darmstadt;Tz 1180;Darmstadt;ICE T
+1181_Horb;Tz 1181;Horb am Neckar;ICE T
+1182_Mainz;Tz 1182;Mainz;ICE T
+1183_Zwickau;Tz 1183;Zwickau;ICE T
+1184_Kaiserslautern;Tz 1184;Kaiserslautern;ICE T
+1185_HomburgT;Tz 1185;Homburg (Saar);ICE T
+1186_Neunkirchen;Tz 1186;Neunkirchen (Saar);ICE T
+1187_SaarbrueckenT;Tz 1187;Saarbrücken;ICE T
+1188_Saarlouis;Tz 1188;Saarlouis;ICE T
+1189_Dillingen;Tz 1189;Dillingen/Saar;ICE T
+1190_Wien;Tz 1190;Wien;ICE T
+1501_Eisenach;Tz 1501;Eisenach;ICE T
+1502_Karlsruhe;Tz 1502;Karlsruhe;ICE T
+1503_Altenburg;Tz 1503;Altenburg;ICE T
+1504_Heidelberg;Tz 1504;Heidelberg;ICE T
+1505_Meiningen;Tz 1505;Meiningen;ICE T
+1506_Kassel;Tz 1506;Kassel;ICE T
+1507_Altenbeken;Tz 1507;Altenbeken;ICE T
+1508_Warburg;Tz 1508;Warburg;ICE T
+1509_Willebadessen;Tz 1509;Willebadessen;ICE T
+1510_BadDriburg;Tz 1510;Bad Driburg;ICE T
+1521_Homburg;Tz 1521;Homburg (Saar);ICE T
+1522_Torgau;Tz 1522;Torgau;ICE T
+1523_Greifswald;Tz 1523;Greifswald;ICE T
+1524_Gnoenien;Tz 1524;Gnoien;ICE T
+1525_GnoienT;Tz 1525;Gnoien;ICE T
+1526_Teterow;Tz 1526;Teterow;ICE T
+1527_Malchin;Tz 1527;Malchin;ICE T
+1528_Stavenhagen;Tz 1528;Reuterstadt Stavenhagen;ICE T
+4101_BadKrozingen;Tz 4101;Bad Krozingen;ICE TD;OUS
+4102_Anklam;Tz 4102;Anklam;ICE TD;OUS
+4103_BadGst;Tz 4103;Bad Gastein;ICE TD;OUS
+4104_Bergen;Tz 4104;Bergen auf Rügen;ICE TD;OUS
+4601_Einstein;Tz 4601;Albert Einstein;ICE 4
+4602_Frank;Tz 4602;Anne Frank;ICE 4
+4603_Beethoven;Tz 4603;Ludwig van Beethoven;ICE 4
+4604_Dietrich;Tz 4604;Marlene Dietrich;ICE 4
+4605_Humboldt;Tz 4605;Alexander von Humboldt;ICE 4
+4606_FannyHensel;Tz 4606;Fanny Hensel;ICE 4
+4607_Kollwitz;Tz 4607;Käthe Kollwitz;ICE 4
+4608_HedwigDohm;Tz 4608;Hedwig Dohm;ICE 4
+4610_Scholl;Tz 4610;Geschwister Scholl;ICE 4
+4611_MagnaCharta;Tz 4611;Magna Charta;ICE 4
+4612_Gaddafi;Tz 4612;Muammar al-Gaddafi;ICE 4
+4613_Goethe;Tz 4613;Johann Wolfgang von Goethe;ICE 4
+4614_Schiller;Tz 4614;Friedrich Schiller;ICE 4
+4615_Lessing;Tz 4615;Gotthold Ephraim Lessing;ICE 4
+4616_Fontane;Tz 4616;Theodor Fontane;ICE 4
+4617_Kneipp;Tz 4617;Sebastian Kneipp;ICE 4
+4618_Liebig;Tz 4618;Justus von Liebig;ICE 4
+4619_Siemens;Tz 4619;Werner von Siemens;ICE 4
+4620_Bosch;Tz 4620;Robert Bosch;ICE 4
+4621_Fraunhofer;Tz 4621;Joseph von Fraunhofer;ICE 4
+4622_Roentgen;Tz 4622;Wilhelm Conrad Röntgen;ICE 4
+4623_Planck;Tz 4623;Max Planck;ICE 4
+4624_Hertz;Tz 4624;Heinrich Hertz;ICE 4
+4625_Braun;Tz 4625;Wernher von Braun;ICE 4
+4651_Mainz;Tz 4651;Mainz;ICE 4
+4652_BadenBaden4;Tz 4652;Baden-Baden;ICE 4
+4653_Garmisch4;Tz 4653;Garmisch-Partenkirchen;ICE 4
+4654_Freiburg4;Tz 4654;Freiburg im Breisgau;ICE 4
+4655_Heilbronn;Tz 4655;Heilbronn;ICE 4
+4656_Kaiserslautern;Tz 4656;Kaiserslautern;ICE 4
+4657_Pforzheim;Tz 4657;Pforzheim;ICE 4
+4658_Ludwigsburg;Tz 4658;Ludwigsburg;ICE 4
+4659_BadenBaden;Tz 4659;Baden-Baden;ICE 4
+4660_Freiburg4b;Tz 4660;Freiburg im Breisgau;ICE 4
+4661_Offenburg4;Tz 4661;Offenburg;ICE 4
+4662_BadenBaden4c;Tz 4662;Baden-Baden;ICE 4
+4663_Konstanz4;Tz 4663;Konstanz;ICE 4
+4664_Singen4;Tz 4664;Singen (Hohentwiel);ICE 4
+4665_Ravensburg4;Tz 4665;Ravensburg;ICE 4
+4666_Friedrichshafen4;Tz 4666;Friedrichshafen;ICE 4
+4667_Ulm4c;Tz 4667;Ulm;ICE 4
+4681_Saarbruecken;Tz 4681;Saarbrücken;ICE 4
+4682_Wuppertal4;Tz 4682;Wuppertal;ICE 4
+4683_Bonn;Tz 4683;Bonn;ICE 4
+4684_Koblenz;Tz 4684;Koblenz;ICE 4
+4685_Darmstadt;Tz 4685;Darmstadt;ICE 4
+4686_Mainz4b;Tz 4686;Mainz;ICE 4
+4687_Wiesbaden4;Tz 4687;Wiesbaden;ICE 4
+4688_Darmstadt4;Tz 4688;Darmstadt;ICE 4
+4689_Frankfurt4;Tz 4689;Frankfurt am Main;ICE 4
+4690_Hanau4;Tz 4690;Hanau;ICE 4
+4691_Aschaffenburg4;Tz 4691;Aschaffenburg;ICE 4
+4692_Wuerzburg4;Tz 4692;Würzburg;ICE 4
+4701_Ulm4;Tz 4701;Ulm;ICE 4
+4702_Augsburg4;Tz 4702;Augsburg;ICE 4
+4703_Heidelberg;Tz 4703;Heidelberg;ICE 4
+4704_Heilbronn4;Tz 4704;Heilbronn;ICE 4
+4705_Karlsruhe4;Tz 4705;Karlsruhe;ICE 4
+4706_Mannheim;Tz 4706;Mannheim;ICE 4
+4707_Pforzheim4;Tz 4707;Pforzheim;ICE 4
+4708_Stuttgart4;Tz 4708;Stuttgart;ICE 4
+4709_Ulm4b;Tz 4709;Ulm;ICE 4
+4710_Erfurt;Tz 4710;Erfurt;ICE 4
+4711_Gera;Tz 4711;Gera;ICE 4
+4712_Chemnitz;Tz 4712;Chemnitz;ICE 4
+4713_Dessau4;Tz 4713;Dessau-Roßlau;ICE 4
+4714_Halle;Tz 4714;Halle (Saale);ICE 4
+4715_Jena4;Tz 4715;Jena;ICE 4
+4716_Leipzig4;Tz 4716;Leipzig;ICE 4
+4717_Paris;Tz 4717;Paris;ICE 4
+9001_Hanover;Tz 9001;Hannover;ICE 4
+9002_Bielefeld4;Tz 9002;Bielefeld;ICE 4
+9003_Braunschweig4;Tz 9003;Braunschweig;ICE 4
+9004_Goettingen4;Tz 9004;Göttingen;ICE 4
+9005_Heide4;Tz 9005;Heide (Holstein);ICE 4
+9006_MartinLuther;Tz 9006;Martin Luther;ICE 4
+9007_Westerland4;Tz 9007;Westerland/Sylt;ICE 4
+9008_Bremen;Tz 9008;Bremen;ICE 4
+9009_Bremerhaven4;Tz 9009;Bremerhaven;ICE 4
+9010_Oldenburg;Tz 9010;Oldenburg (Oldb);ICE 4
+9011_Osnabrueck4;Tz 9011;Osnabrück;ICE 4
+9012_Muenster4;Tz 9012;Münster (Westf);ICE 4
+9013_Rheine;Tz 9013;Rheine;ICE 4
+9014_Dortmund4;Tz 9014;Dortmund;ICE 4
+9015_Essen4;Tz 9015;Essen;ICE 4
+9016_Bochum4;Tz 9016;Bochum;ICE 4
+9017_Duisburg;Tz 9017;Duisburg;ICE 4
+9018_Duesseldorf;Tz 9018;Düsseldorf;ICE 4
+9019_HeinrichHeine;Tz 9019;Heinrich Heine;ICE 4
+9020_Wuppertal4b;Tz 9020;Wuppertal;ICE 4
+9021_Aachen4;Tz 9021;Aachen;ICE 4
+9022_Bonn4;Tz 9022;Bonn;ICE 4
+9023_Koeln4b;Tz 9023;Köln;ICE 4
+9024_Mainz4;Tz 9024;Mainz;ICE 4
+9025_ThomasMann;Tz 9025;Thomas Mann;ICE 4
+9026_Duesseldorf;Tz 9026;Düsseldorf;ICE 4
+9027_Dortmund;Tz 9027;Dortmund;ICE 4
+9028_Essen;Tz 9028;Essen;ICE 4
+9029_Bochum;Tz 9029;Bochum;ICE 4
+9030_Duisburg;Tz 9030;Duisburg;ICE 4
+9031_Wuppertal;Tz 9031;Wuppertal;ICE 4
+9032_Aachen;Tz 9032;Aachen;ICE 4
+9033_Bonn;Tz 9033;Bonn;ICE 4
+9034_Koeln;Tz 9034;Köln;ICE 4
+9035_Mainz;Tz 9035;Mainz;ICE 4
+9036_ThomasMann;Tz 9036;Thomas Mann;ICE 4
+9037_HeinrichHeine;Tz 9037;Heinrich Heine;ICE 4
+9038_MartinLuther;Tz 9038;Martin Luther;ICE 4
+9039_Goettingen;Tz 9039;Göttingen;ICE 4
+9040_Bielefeld;Tz 9040;Bielefeld;ICE 4
+9041_Braunschweig;Tz 9041;Braunschweig;ICE 4
+9042_Hanover;Tz 9042;Hannover;ICE 4
+9043_Bremen;Tz 9043;Bremen;ICE 4
+9044_Oldenburg;Tz 9044;Oldenburg (Oldb);ICE 4
+9045_Osnabrueck;Tz 9045;Osnabrück;ICE 4
+9046_Muenster;Tz 9046;Münster (Westf);ICE 4
+9047_Rheine;Tz 9047;Rheine;ICE 4
+9048_Bremerhaven;Tz 9048;Bremerhaven;ICE 4
+9049_Heide;Tz 9049;Heide (Holstein);ICE 4
+9050_Westerland;Tz 9050;Westerland/Sylt;ICE 4
+9051_Cuxhaven4;Tz 9051;Cuxhaven;ICE 4
+9052_Bremerhaven4b;Tz 9052;Bremerhaven;ICE 4
+9053_Wilhelmshaven4;Tz 9053;Wilhelmshaven;ICE 4
+9054_Emden4;Tz 9054;Emden;ICE 4
+9055_Leer4;Tz 9055;Leer (Ostfriesland);ICE 4
+9056_Papenburg4;Tz 9056;Papenburg;ICE 4
+9057_Meppen4;Tz 9057;Meppen;ICE 4
+9058_Lingen4;Tz 9058;Lingen (Ems);ICE 4
+9059_Rheine4;Tz 9059;Rheine;ICE 4
+9060_Muenster4b;Tz 9060;Münster (Westf);ICE 4
+9061_Hamm4;Tz 9061;Hamm (Westf);ICE 4
+9062_Soest4;Tz 9062;Soest;ICE 4
+9063_Lippstadt4;Tz 9063;Lippstadt;ICE 4
+9064_Paderborn4;Tz 9064;Paderborn;ICE 4
+9065_Altenbeken4;Tz 9065;Altenbeken;ICE 4
+9066_Warburg4;Tz 9066;Warburg;ICE 4
+9067_Kassel4;Tz 9067;Kassel;ICE 4
+9068_Göttingen4b;Tz 9068;Göttingen;ICE 4
+9069_Hannover4b;Tz 9069;Hannover;ICE 4
+9070_Celle4;Tz 9070;Celle;ICE 4
+9071_Uelzen4;Tz 9071;Uelzen;ICE 4
+9072_Lueneburg4;Tz 9072;Lüneburg;ICE 4
+9073_Hamburg4;Tz 9073;Hamburg;ICE 4
+9074_Luebeck4;Tz 9074;Lübeck;ICE 4
+9075_Kiel4;Tz 9075;Kiel;ICE 4
+9076_Flensburg4;Tz 9076;Flensburg;ICE 4
+9077_Schwerin4;Tz 9077;Schwerin;ICE 4
+9078_Rostock4;Tz 9078;Rostock;ICE 4
+9079_Stralsund4;Tz 9079;Stralsund;ICE 4
+9080_Greifswald4;Tz 9080;Greifswald;ICE 4
+9081_Pasewalk4;Tz 9081;Pasewalk;ICE 4
+9082_Angermuende4;Tz 9082;Angermünde;ICE 4
+9083_Eberswalde4;Tz 9083;Eberswalde;ICE 4
+9084_Berlin4;Tz 9084;Berlin;ICE 4
+9085_Potsdam4;Tz 9085;Potsdam;ICE 4
+9086_Brandenburg4;Tz 9086;Brandenburg an der Havel;ICE 4
+9087_Magdeburg4;Tz 9087;Magdeburg;ICE 4
+9088_Stendal4;Tz 9088;Stendal;ICE 4
+9089_Wolfsburg4;Tz 9089;Wolfsburg;ICE 4
+9090_Braunschweig4b;Tz 9090;Braunschweig;ICE 4
+9457_Koeln;Tz 9457;Köln;ICE 4
+8001_Rheinland;Tz 8001;Rheinland-Pfalz;ICE 3neo
+8002_Budapest;Tz 8002;Budapest;ICE 3neo
+8003_Mainz;Tz 8003;Mainz;ICE 3neo
+8004_Koeln;Tz 8004;Köln;ICE 3neo
+8005_Frankfurt;Tz 8005;Frankfurt am Main;ICE 3neo
+8006_Muenchen;Tz 8006;München;ICE 3neo
+8007_Wuppertal;Tz 8007;Wuppertal;ICE 3neo
+8008_Dortmund3neo;Tz 8008;Dortmund;ICE 3neo
+8009_Essen3neo;Tz 8009;Essen;ICE 3neo
+8010_Duisburg3neo;Tz 8010;Duisburg;ICE 3neo
+8011_Duesseldorf3neo;Tz 8011;Düsseldorf;ICE 3neo
+8012_Stuttgart3neo;Tz 8012;Stuttgart;ICE 3neo
+8013_Karlsruhe3neo;Tz 8013;Karlsruhe;ICE 3neo
+8014_Mannheim3neo;Tz 8014;Mannheim;ICE 3neo
+8015_Nürnberg3neo;Tz 8015;Nürnberg;ICE 3neo
